@@ -3,31 +3,23 @@
     font-family: "glacialindifference-regular";
     src: url('../assets/fonts/GlacialIndifference-Regular.otf');
 }
+
 @font-face {
     font-family: "glacialindifference-bold";
     src: url('../assets/fonts/GlacialIndifference-Bold.otf');
-} 
-.container{
+}
+
+.container {
     margin-top: 100px;
 }
-.title{
+
+.title {
     font-family: 'glacialindifference-bold';
     color: #30363d;
     font-size: 40px;
 }
-.container>div{
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    }
-.logo{
-    width: 18vw;
-    border-radius: 50%;
-    height: 10vw;
-    background: #30363d;
-}
+
 .description {
-    margin-top: 30px;
     letter-spacing: 1px;
     font-size: 30px;
 }

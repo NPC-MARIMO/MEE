@@ -2,6 +2,7 @@ import styles from "../css/Projects.module.css";
 import Button from "./Button";
 
 function Projects() {
+ 
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>Projects</h3>

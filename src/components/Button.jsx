@@ -2,7 +2,7 @@ import styles from "../css/Button.module.css";
 import gsap from "gsap";
 import { useRef } from "react";
 
-function Button({ title }) {
+function Button({ title, style}) {
   const buttonRef = useRef(null);
   const circleRef = useRef(null);
 
@@ -26,6 +26,7 @@ function Button({ title }) {
   return (
     <div
       className={styles.button}
+      style={style}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       ref={buttonRef}
