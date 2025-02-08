@@ -1,0 +1,25 @@
+.button{
+    font-family: 'glacialindifference-regular';
+    color: #c9c1c9;
+    background: transparent;
+    padding: 12px 30px;    
+    border-radius: 50px;
+    overflow: hidden;   
+    position: relative;
+    z-index: 3  ;
+    text-align: center;
+    width: 150px;
+    border: 2px solid #58a6ff;
+}
+.buttoncircle{
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    transform: translate(-30% , -30%) scale(0);
+    border-radius: 50%;
+    background: #58a6ff;
+    position: absolute;
+}
+.buttonText{
+    z-index: 3;
+}

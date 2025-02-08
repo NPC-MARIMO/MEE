@@ -1,0 +1,56 @@
+/* fonts */
+@font-face {
+    font-family: "glacialindifference-regular";
+    src: url('../assets/fonts/GlacialIndifference-Regular.otf');
+}
+@font-face {
+    font-family: "glacialindifference-bold";
+    src: url('../assets/fonts/GlacialIndifference-Bold.otf');
+}
+.container {
+    display: flex;
+    padding: 50px 75px;
+    justify-content: space-between;
+    color: #c9c1c9;
+    font-family: "glacialindifference-regular";
+    align-items: center;
+}
+.container .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .left .logo{
+    width: 75px;
+    border-radius: 50%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161b22;
+}
+.container ul{
+    transform: translateX(-25px);
+    display: flex;
+    gap: 30px;
+    padding: 12px 35px;
+    height: 40px;
+    background: #161b22;
+    border-radius: 50px;
+}
+.container ul li{
+    display: flex;
+    flex-direction: column;
+}
+.container ul li span:nth-child(2){
+    transform: rotateX(90deg);
+}
+
+.button{
+    font-family: 'glacialindifference-regular';
+    color: #c9c1c9;
+    background: transparent;
+    padding: 12px 30px;    
+    border-radius: 50px;
+    border: 2px solid #58a6ff;
+}

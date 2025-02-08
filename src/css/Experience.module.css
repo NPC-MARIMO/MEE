@@ -1,0 +1,25 @@
+/* fonts */
+@font-face {
+    font-family: "glacialindifference-regular";
+    src: url('../assets/fonts/GlacialIndifference-Regular.otf');
+}
+@font-face {
+    font-family: "glacialindifference-bold";
+    src: url('../assets/fonts/GlacialIndifference-Bold.otf');
+}
+
+.title {
+    font-family: 'glacialindifference-bold';
+    color: #30363d;
+    font-size: 40px;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.description{
+    margin-top: 30px;
+    letter-spacing: 1px;
+    font-size: 28px;
+}

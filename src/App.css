@@ -1,0 +1,13 @@
+/* fonts */
+@font-face {
+    font-family: "glacialindifference-regular";
+    src: url('../assets/fonts/GlacialIndifference-Regular.otf');
+}
+@font-face {
+    font-family: "glacialindifference-bold";
+    src: url('../assets/fonts/GlacialIndifference-Bold.otf');
+}
+.container {
+    font-family: glacialindifference-regular;
+    color: #c9c1c9;
+}

@@ -1,0 +1,41 @@
+/* fonts */
+@font-face {
+    font-family: "glacialindifference-regular";
+    src: url('../assets/fonts/GlacialIndifference-Regular.otf');
+}
+@font-face {
+    font-family: "glacialindifference-bold";
+    src: url('../assets/fonts/GlacialIndifference-Bold.otf');
+}
+
+.title {
+    font-family: 'glacialindifference-bold';
+    color: #30363d;
+    font-size: 40px;
+}
+.description{
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: 28px;
+}
+
+.container {
+    margin-top: 30px;
+    display: flex;
+}
+.circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #161b22;
+}
+.stats{
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.githubcontri{
+    height: 180px;
+    margin-top: 30px;
+}

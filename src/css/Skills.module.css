@@ -1,0 +1,44 @@
+/* fonts */
+@font-face {
+    font-family: "glacialindifference-regular";
+    src: url('../assets/fonts/GlacialIndifference-Regular.otf');
+}
+@font-face {
+    font-family: "glacialindifference-bold";
+    src: url('../assets/fonts/GlacialIndifference-Bold.otf');
+}
+
+.skillcontainer .title {
+    font-family: 'glacialindifference-bold';
+    color: #30363d;
+    font-size: 40px;
+}
+.skillcontainer .description{
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: 28px;
+}
+
+.skillcontainer {
+    margin-top: 100px;
+}
+.skillcontainer .skills {
+    display: flex;
+    margin-top: 30px;
+}
+.skillcontainer .logo{
+    font-size: 15rem;
+}
+.skillcontainer .skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.skillcontainer .sk{
+    padding: 5px 15px;
+    font-size: 25px;
+    border-radius: 50px;
+    border: 2px solid #161b22;
+}
