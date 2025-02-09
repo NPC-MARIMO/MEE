@@ -51,10 +51,36 @@
     background: transparent;
     padding: 20px;
     font-family: "glacialindifference-regular";
+    resize: none;
+    color: #c9c1c9  ;
     outline: none;
+    margin-bottom: 30px;
     font-size: 20px;
     border: 2px solid #30363d;
 }
 .input:focus, .textarea:focus{
     border: 2px solid #58a6ff;
+}
+
+.other>div{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.linkcontainer{
+    width: 48%;
+    padding: 15px 20px;
+    border: 2px solid #30363d;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 720px) {
+    .container>div div{
+        flex-direction: column;
+    }
+    .linkcontainer{
+        width: 100%;
+    }
+    
 }

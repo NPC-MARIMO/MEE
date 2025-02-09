@@ -39,3 +39,10 @@
     height: 180px;
     margin-top: 30px;
 }
+
+@media screen and (max-width: 1470px) {
+    .githubcontri{
+        height: 0;
+    }
+    
+}

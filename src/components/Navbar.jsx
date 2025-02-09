@@ -28,6 +28,7 @@ function Navbar() {
 
   return (
     <nav className={styles.container}>
+      <div className={styles.leftsmall} ></div>
       <div className={styles.left}>
         <div className={styles.logo}></div>
         <ul>

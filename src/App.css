@@ -10,4 +10,25 @@
 .container {
     font-family: glacialindifference-regular;
     color: #c9c1c9;
+    padding:    50px 200px;
+}
+
+@media screen and (max-width: 1150px) {
+    .container{
+        padding: 50px 100px;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .container{
+        padding: 50px 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container{
+        padding: 50px 20px;
+    }
+    
 }

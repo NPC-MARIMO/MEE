@@ -2,13 +2,15 @@
     font-family: 'glacialindifference-regular';
     color: #c9c1c9;
     background: transparent;
-    padding: 12px 30px;    
+    padding: 12px 15px;    
     border-radius: 50px;
     overflow: hidden;   
+    max-width: 150px;
     position: relative;
     z-index: 3  ;
-    text-align: center;
-    width: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid #58a6ff;
 }
 .buttoncircle{
@@ -21,6 +23,6 @@
     position: absolute;
 }
 .buttonText{
-    font-size: 20px;
+    font-size: 17px;
     z-index: 3;
 }

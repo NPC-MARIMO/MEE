@@ -5,7 +5,7 @@ function App() {
     <>
       <main>
         <Navbar />
-        <div className="container" style={{padding: "50px 200px"}}>
+        <div className="container" >
           <Hero/>
           <Experience />
           <Skills />

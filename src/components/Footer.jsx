@@ -1,9 +1,10 @@
+import styles from '../css/Footer.module.css'
+
+
 function Footer() {
     return ( 
-        <div style={{height : "100vh", 
-
-        }}>
-
+        <div className={styles.container}>
+            <p className={styles.description}>2025 All rights reserved</p>
         </div>
      );
 }

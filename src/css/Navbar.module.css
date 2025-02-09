@@ -8,12 +8,16 @@
     src: url('../assets/fonts/GlacialIndifference-Bold.otf');
 }
 .container {
+    position: relative;
     display: flex;
     padding: 50px 75px;
     justify-content: space-between;
     color: #c9c1c9;
     font-family: "glacialindifference-regular";
     align-items: center;
+}
+.container .leftsmall{
+    position: absolute;
 }
 .container .left{
     display: flex;
@@ -53,4 +57,26 @@
     padding: 12px 30px;    
     border-radius: 50px;
     border: 2px solid #58a6ff;
+}
+
+@media screen and (max-width: 550px) {
+    .container{
+        padding: 50px 40px;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .left{
+        width: 0;;
+        overflow: hidden;
+        height: 0;
+    }
+    .leftsmall{
+        display: initial;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #161B22;
+    }
 }

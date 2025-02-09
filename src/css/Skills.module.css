@@ -47,3 +47,23 @@
     border-radius: 50px;
     border: 2px solid #161b22;
 }
+
+@media screen and (max-width: 930px) {
+    .skills{
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 460px) {
+    .skillcontainer .logo{
+        font-size: 12rem;
+        margin-bottom: 30px;
+    }
+    .skillcontainer .sk{
+        font-size: 20px;
+        margin-right: 10px;
+        padding: 5px 10px;
+    };
+    
+}

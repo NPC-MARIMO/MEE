@@ -17,6 +17,24 @@ function Contact() {
         <textarea className={styles.textarea} placeholder="Message"></textarea>
         <Button title={"Send Mail"}  />
       </div>
+      <div className={styles.other}>
+        <h3 className={styles.title}>Other</h3>
+        <div>
+          <div className={styles.linkcontainer}>
+            <p className={styles.link}>Instagram</p>
+          </div>
+          <div className={styles.linkcontainer}>
+            <p className={styles.link}>X</p>
+          </div>
+          <div className={styles.linkcontainer}>
+            <p className={styles.link}>Github</p>
+          </div>
+          <div className={styles.linkcontainer}>
+            <p className={styles.link}>LinkedIn</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }
