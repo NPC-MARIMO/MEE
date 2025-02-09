@@ -50,17 +50,18 @@
     margin-top: 10px;
 }
 .container ul{
-    transform: translateX(-25px);
+    transform: translateX(-35px);
     display: flex;
     gap: 30px;
-    padding: 12px 35px;
-    height: 40px;
+    padding: 12px 35px 0 45px;
+    height: 50px;
     background: #161b22;
     border-radius: 50px;
 }
 .container ul li{
     display: flex;
     flex-direction: column;
+    font-size: 20px;
     
     cursor: pointer;
 }
