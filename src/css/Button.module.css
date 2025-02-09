@@ -8,9 +8,6 @@
     max-width: 150px;
     position: relative;
     z-index: 3  ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: 2px solid #58a6ff;
 }
 .buttoncircle{
@@ -24,5 +21,7 @@
 }
 .buttonText{
     font-size: 17px;
+    text-align: center;
+    width: 100%;
     z-index: 3;
 }
