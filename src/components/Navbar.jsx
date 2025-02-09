@@ -21,16 +21,34 @@ function Navbar() {
           transform: "rotateX(-90deg)",
           duration: 0.4,
         },
-        "<" // Synchronize both animations
+        "<"
       );
     });
   };
 
+  const handleClick = (e, sectionId) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <nav className={styles.container}>
-      <div className={styles.leftsmall} ></div>
+      <div className={styles.leftsmall}>
+        <img
+          src="https://raw.githubusercontent.com/NPC-MARIMO/mypf/refs/heads/main/src/assets/logo.png"
+          alt=""
+        />
+      </div>
       <div className={styles.left}>
-        <div className={styles.logo}></div>
+        <div className={styles.logo}>
+          <img
+            src="https://raw.githubusercontent.com/NPC-MARIMO/mypf/refs/heads/main/src/assets/logo.png"
+            alt=""
+          />
+        </div>
         <ul>
           {navlinks.map((link, index) => {
             liRefs.current[index] = liRefs.current[index] || [
@@ -39,8 +57,20 @@ function Navbar() {
             ];
             return (
               <li key={index} onMouseEnter={() => animate(index)}>
-                <span ref={liRefs.current[index][0]}>{link}</span>
-                <span ref={liRefs.current[index][1]}>{link}</span>
+                <a
+                  href={`#${link}`}
+                  ref={liRefs.current[index][1]}
+                  onClick={(e) => handleClick(e, link)}
+                >
+                  {link}
+                </a>
+                <a
+                  href={`#${link}`}
+                  ref={liRefs.current[index][0]}
+                  onClick={(e) => handleClick(e, link)}
+                >
+                  {link}
+                </a>
               </li>
             );
           })}

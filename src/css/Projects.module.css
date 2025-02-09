@@ -32,9 +32,17 @@
 }
 .projectimage{
     width: 100%;
-    height: 10rem;
+    height: 13rem;
     border-radius: 10px;
-    background: #30363d;
+    padding: 1px;
+    border: 1px solid #58a6ff75;
+    overflow: hidden;
+}
+.projectimage img{
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .projecttitle{
     font-size: 25px;

@@ -28,7 +28,14 @@
     width: 150px;
     border-radius: 50%;
     background: #161b22;
+    overflow: hidden;
 }
+.circle img{
+    height: 150px ;
+    object-fit: cover;
+    width: 150px;
+}
+
 .stats{
     display: flex;
     padding: 10px;

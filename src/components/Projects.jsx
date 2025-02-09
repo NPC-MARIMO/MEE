@@ -2,9 +2,30 @@ import styles from "../css/Projects.module.css";
 import Button from "./Button";
 
 function Projects() {
+
+  const Projects = [
+    {
+      title: "Lazarev",
+      description: "This is a description",
+      imageUrl: "https://raw.githubusercontent.com/NPC-MARIMO/mypf/refs/heads/main/src/assets/lazarev.png",
+      date : "dd/mm/yyyy"
+    },
+    {
+      title: "iPhone",
+      description: "This is a description",
+      imageUrl: "https://raw.githubusercontent.com/NPC-MARIMO/mypf/refs/heads/main/src/assets/iphone.png",
+      date : "dd/mm/yyyy"
+    },
+    {
+      title: "Brainwave",
+      description: "This is a description",
+      imageUrl: "https://raw.githubusercontent.com/NPC-MARIMO/mypf/refs/heads/main/src/assets/brainwave.png",
+      date : "dd/mm/yyyy"
+    }
+  ]
  
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="Project">
       <h3 className={styles.title}>Projects</h3>
       <p className={styles.description}>
         Following projects showcases my skills and experience through real world
@@ -12,36 +33,23 @@ function Projects() {
         work with different technologies.
       </p>
       <div>
-        <div className={styles.project}>
-          <div className={styles.projectimage}></div>
+       {
+        Projects && Projects.length > 0 &&
+        Projects.map((project) => (
+          <div className={styles.project}>
+          <div className={styles.projectimage}>
+            <img src={project.imageUrl} alt="" />
+          </div>
           <div>
-            <h3 className={styles.projecttitle}>Project Name</h3>
-            <p className={styles.projectdate}>DD/MM/YYYY</p>
+            <h3 className={styles.projecttitle}>{project.title}</h3>
+            <p className={styles.projectdate}>{project.date}</p>
             <p className={styles.projectdescription}>
-              Technologies and other things about this project
+              {project.description}
             </p>
           </div>
         </div>
-        <div className={styles.project}>
-          <div className={styles.projectimage}></div>
-          <div>
-            <h3 className={styles.projecttitle}>Project Name</h3>
-            <p className={styles.projectdate}>DD/MM/YYYY</p>
-            <p className={styles.projectdescription}>
-              Technologies and other things about this project
-            </p>
-          </div>
-        </div>
-        <div className={styles.project}>
-          <div className={styles.projectimage}></div>
-          <div>
-            <h3 className={styles.projecttitle}>Project Name</h3>
-            <p className={styles.projectdate}>DD/MM/YYYY</p>
-            <p className={styles.projectdescription}>
-              Technologies and other things about this project
-            </p>
-          </div>
-        </div>
+        ))
+       }
       </div>
       <div className={styles.buttoncontainer}>
         <Button title="View More" />
