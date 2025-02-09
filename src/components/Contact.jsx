@@ -16,7 +16,7 @@ function Contact() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/send-otp", {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/send-otp`, {
         name,
         email,
         message,
