@@ -23,5 +23,11 @@
     font-size: 17px;
     text-align: center;
     width: 100%;
+    background: transparent;
+    color: #c9c1c9;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-family: 'glacialindifference-regular';
     z-index: 3;
 }
