@@ -77,7 +77,7 @@ function Navbar() {
         </ul>
       </div>
       <div className={styles.right}>
-        <Button title="Let's Talk" />
+        <Button title="Let's Talk" params="Contact" onClick={e => handleClick(e, 'Contact')} />
       </div>
     </nav>
   );

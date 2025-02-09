@@ -31,12 +31,13 @@
     justify-content: space-between;
 }
 .projectimage{
-    width: 100%;
     height: 13rem;
     border-radius: 10px;
-    padding: 1px;
     border: 1px solid #58a6ff75;
     overflow: hidden;
+}
+.project{
+    max-width: 350px;
 }
 .projectimage img{
     aspect-ratio: 16/9;
