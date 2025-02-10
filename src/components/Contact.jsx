@@ -79,7 +79,7 @@ function Contact() {
             </div>
             <div className={styles.contactItem}>
               <FaEnvelope className={styles.icon} />
-              <p>your-email@example.com</p>
+              <p>shivangbhaiisgreat@gmail.com</p>
             </div>
           </div>
         </div>
