@@ -1,12 +1,12 @@
-import { meta } from "@eslint/js";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import gsap from "gsap";
 
 const GITHUB_API_KEY = import.meta.env.VITE_GITHUB_API_KEY;
 const USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
 
-
 const ContributionGraph = () => {
-  const [contributions, setContributions] = useState([]);
+  const [weeks, setWeeks] = useState([]);
+  const weekRefs = useRef([]); // Array of refs for each week (row)
 
   useEffect(() => {
     const fetchContributions = async () => {
@@ -15,7 +15,6 @@ const ContributionGraph = () => {
           user(login: "${USERNAME}") {
             contributionsCollection {
               contributionCalendar {
-                totalContributions
                 weeks {
                   contributionDays {
                     date
@@ -40,9 +39,7 @@ const ContributionGraph = () => {
         });
 
         const data = await response.json();
-        const weeks = data.data.user.contributionsCollection.contributionCalendar.weeks;
-        const days = weeks.flatMap((week) => week.contributionDays);
-        setContributions(days);
+        setWeeks(data.data.user.contributionsCollection.contributionCalendar.weeks);
       } catch (error) {
         console.error("Error fetching contribution data:", error);
       }
@@ -51,23 +48,41 @@ const ContributionGraph = () => {
     fetchContributions();
   }, []);
 
+  useEffect(() => {
+    if (weekRefs.current.length > 0) {
+      gsap.fromTo(
+        weekRefs.current,
+        { opacity: 0,  },
+        { opacity: 1,  stagger: 0.01, ease: "power2.out", duration: 0.3 }
+      );
+    }
+  }, [weeks]);
+
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(53, 17px)", gap: "4px" }}>
-      {contributions.map((day, index) => (
-        <div
-          key={index}
-          title={`${day.date}: ${day.contributionCount} contributions`}
-          style={{
-            width: "17px",
-            height: "17px",
-            backgroundColor: day.contributionCount > 0 ? day.color : "#161b22",
-            borderRadius: "3px",
-            transition: "transform 0.2s",
-            cursor: "pointer",
-          }}
-          onMouseEnter={(e) => (e.target.style.transform = "scale(1.2)")}
-          onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
-        ></div>
+    <div style={{ display: "flex", gap: "4px" }}>
+      {weeks.map((week, weekIndex) => (
+        <div 
+          key={weekIndex} 
+          ref={(el) => (weekRefs.current[weekIndex] = el)}
+          style={{ display: "flex", flexDirection: "column", gap: "4px" }}
+        >
+          {week.contributionDays.map((day, dayIndex) => (
+            <div
+              key={dayIndex}
+              title={`${day.date}: ${day.contributionCount} contributions`}
+              style={{
+                width: "17px",
+                height: "17px",
+                backgroundColor: day.contributionCount > 0 ? day.color : "#161b22",
+                borderRadius: "3px",
+                transition: "transform 0.2s",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => (e.target.style.transform = "scale(1.2)")}
+              onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
+            ></div>
+          ))}
+        </div>
       ))}
     </div>
   );

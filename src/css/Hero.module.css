@@ -17,14 +17,19 @@
 .title span{
     color: #58A6FF;
     text-shadow: 0 0 3px #58a6ffa4;
+    display: inline-block;
 }
 .description{
     width: 80%;
     margin-top: 20px;
     letter-spacing: 1px;
     font-size: 20px;
+    overflow: hidden;
 }
-
+.description span{
+    display: inline-block;
+    margin-right: 7px;
+}
 .first{
     display: flex;
     justify-content: space-between;
