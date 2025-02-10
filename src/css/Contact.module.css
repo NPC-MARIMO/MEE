@@ -30,6 +30,7 @@
 }
 
 .container>div div {
+    justify-content: space-between;
     display: flex;
     gap: 10px;
 }
@@ -88,20 +89,40 @@
 .loading {
     color: #856404;
 }
-.btncontainer{
+
+.btncontainer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
-.btncontainer p{
+
+.btncontainer p {
     color: #30363d;
 }
-.btncontainer>div div{
+
+.btncontainer>div div {
     height: 25px;
     width: 25px;
-    border-radius:50%;
+    border-radius: 50%;
     background: #30363d;
+}
+
+.icon {
+    font-size: 18px;
+    color: #007bff;
+}
+
+.contactInfo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 @media screen and (max-width: 720px) {

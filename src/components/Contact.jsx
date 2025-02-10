@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../css/Contact.module.css";
+import { FaPhone, FaEnvelope } from "react-icons/fa";
 import Button from "./Button";
 import axios from "axios";
 
@@ -66,17 +67,22 @@ function Contact() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
+        <div className={styles.btnContainer}>
+          {/* Send Mail Button */}
+          <Button title="Send Mail" handleSendMail={handleSendMail} />
 
-        <div className={styles.btncontainer}>
-          <Button title={"Send Mail"} handleSendMail={handleSendMail} />
-          <div>
-            <div></div>
-            <p>7905358167</p>
-            <div></div>
-            <p>shivangbhaiisgreat@gmail.com</p>
+          {/* Contact Info */}
+          <div className={styles.contactInfo}>
+            <div className={styles.contactItem}>
+              <FaPhone className={styles.icon} />
+              <p>7905358167</p>
+            </div>
+            <div className={styles.contactItem}>
+              <FaEnvelope className={styles.icon} />
+              <p>your-email@example.com</p>
+            </div>
           </div>
         </div>
-
         {status && <p className={styles.status}>{status}</p>}
       </div>
     </div>
