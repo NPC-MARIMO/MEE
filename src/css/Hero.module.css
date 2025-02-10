@@ -44,9 +44,9 @@
     overflow: hidden;
 }
 .circle img{
-    height: 275px ;
+    height: 100%;
     object-fit: cover;
-    width: 275px;
+    width:100%;
 }
 
 .stats{
@@ -73,14 +73,14 @@
         top: 100%;
     }    
     .me{
-        margin-bottom: 300px;
+        margin-bottom: 400px;
     }
 }
 
-@media screen and (max-width: 320px) {
-    .circle , .circle img{
-        height: 240px;
-        width: 240px;
+@media screen and (max-width: 400px) {
+    .circle{
+        width: 80vw;
+        height: 80vw;
+        margin-top: 20px;       
     }
-    
 }

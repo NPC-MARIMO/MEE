@@ -48,7 +48,7 @@ function Hero() {
             <div className={styles.stats}>
               <div>
                 <div></div>
-                <h3>246 Github Contribution</h3>
+                <h3>247 Github Contribution</h3>
               </div>
               <div>
                 <div></div>

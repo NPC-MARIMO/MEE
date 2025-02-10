@@ -22,18 +22,22 @@
 .description {
     letter-spacing: 1px;
     font-size: 30px;
-}
-.container>div{
     margin-top: 30px;
 }
-.container>div div{
+
+.container>div {
+    margin-top: 30px;
+}
+
+.container>div div {
     display: flex;
     gap: 10px;
 }
-.input{
+
+.input {
     background: transparent;
     border: 2px solid #30363d;
-    padding : 20px 30px;
+    padding: 20px 30px;
     font-size: 20px;
     border-radius: 15px;
     transition: all .5s;
@@ -42,7 +46,8 @@
     font-family: "glacialindifference-regular";
     outline: none;
 }
-.textarea{
+
+.textarea {
     width: 100%;
     border-radius: 15px;
     transition: all .5s;
@@ -52,13 +57,15 @@
     padding: 20px;
     font-family: "glacialindifference-regular";
     resize: none;
-    color: #c9c1c9  ;
+    color: #c9c1c9;
     outline: none;
     margin-bottom: 30px;
     font-size: 20px;
     border: 2px solid #30363d;
 }
-.input:focus, .textarea:focus{
+
+.input:focus,
+.textarea:focus {
     border: 2px solid #58a6ff;
 }
 
@@ -68,24 +75,38 @@
     margin-top: 10px;
     padding: 8px;
     border-radius: 5px;
-      }
-  
-  .success {
+}
+
+.success {
     color: #155724;
-  }
-  
-  .error {
+}
+
+.error {
     color: #721c24;
-  }
-  
-  .loading {
+}
+
+.loading {
     color: #856404;
-  }
-  
+}
+.btncontainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.btncontainer p{
+    color: #30363d;
+}
+.btncontainer>div div{
+    height: 25px;
+    width: 25px;
+    border-radius:50%;
+    background: #30363d;
+}
 
 @media screen and (max-width: 720px) {
-    .container>div div{
+    .container>div div {
         flex-direction: column;
     }
-    
+
 }

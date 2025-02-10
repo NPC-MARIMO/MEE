@@ -16,11 +16,14 @@ function Contact() {
     }
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/send-otp`, {
-        name,
-        email,
-        message,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/send-otp`,
+        {
+          name,
+          email,
+          message,
+        }
+      );
 
       if (response.data.success) {
         setStatus("Email sent successfully!");
@@ -64,11 +67,18 @@ function Contact() {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
 
-        <Button title={"Send Mail"} handleSendMail={handleSendMail} />
+        <div className={styles.btncontainer}>
+          <Button title={"Send Mail"} handleSendMail={handleSendMail} />
+          <div>
+            <div></div>
+            <p>7905358167</p>
+            <div></div>
+            <p>shivangbhaiisgreat@gmail.com</p>
+          </div>
+        </div>
 
         {status && <p className={styles.status}>{status}</p>}
       </div>
-
     </div>
   );
 }
