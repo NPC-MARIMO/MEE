@@ -12,7 +12,12 @@
     color: #c9c1c9;
     padding:    50px 200px;
 }
-
+@media screen and (max-width: 1470px) {
+    .container{
+        padding: 50px 150px;
+    }
+    
+}
 @media screen and (max-width: 1150px) {
     .container{
         padding: 50px 100px;

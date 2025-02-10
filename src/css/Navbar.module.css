@@ -42,11 +42,13 @@
     justify-content: center;
     background: #161b22;
 }
+.logo{
+    z-index: 133;
+}
 .logo img{
     object-fit: contain;
     height: 50px;
     width: 50px;;
-    z-index: 11;
     margin-top: 10px;
 }
 .container ul{
@@ -57,6 +59,7 @@
     height: 50px;
     background: #161b22;
     border-radius: 50px;
+    z-index: 0;
 }
 .container ul li{
     display: flex;

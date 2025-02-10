@@ -62,18 +62,6 @@
     border: 2px solid #58a6ff;
 }
 
-.other>div{
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-.linkcontainer{
-    width: 24%;
-    padding: 15px 20px;
-    border: 2px solid #30363d;
-    border-radius: 10px;
-}
 .status {
     font-size: 1rem;
     font-weight: bold;
@@ -98,9 +86,6 @@
 @media screen and (max-width: 720px) {
     .container>div div{
         flex-direction: column;
-    }
-    .linkcontainer{
-        width: 100%;
     }
     
 }

@@ -3,13 +3,49 @@
     font-family: "glacialindifference-regular";
     src: url('../assets/fonts/GlacialIndifference-Regular.otf');
 }
+
 @font-face {
     font-family: "glacialindifference-bold";
     src: url('../assets/fonts/GlacialIndifference-Bold.otf');
 }
-.description{
+
+.description {
     margin-top: 50px;
     letter-spacing: 1px;
     font-size: 12px;
     color: #30363d;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.container>div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container a {
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container img {
+    height: 35px;
+    scale: 1.4;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50px;
+    cursor: pointer;
+
 }

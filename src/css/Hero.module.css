@@ -11,29 +11,42 @@
 .title {
     font-family: 'glacialindifference-bold';
     color: #30363d;
-    font-size: 45px;
+    font-size: 70px;
+    width: 50vw;
+}
+.title span{
+    color: #58A6FF;
+    text-shadow: 0 0 3px #58a6ffa4;
 }
 .description{
+    width: 80%;
     margin-top: 20px;
     letter-spacing: 1px;
-    font-size: 28px;
+    font-size: 20px;
 }
 
+.first{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
 .container {
     margin-top: 30px;
     display: flex;
 }
 .circle{
-    height: 150px;
-    width: 150px;
+    height: 275px;
+    right: 0%;
+    width: 275px;
     border-radius: 50%;
     background: #161b22;
+    position: absolute;
     overflow: hidden;
 }
 .circle img{
-    height: 150px ;
+    height: 275px ;
     object-fit: cover;
-    width: 150px;
+    width: 275px;
 }
 
 .stats{
@@ -50,6 +63,24 @@
 @media screen and (max-width: 1470px) {
     .githubcontri{
         height: 0;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .circle{
+        left: 0;
+        top: 100%;
+    }    
+    .me{
+        margin-bottom: 300px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .circle , .circle img{
+        height: 240px;
+        width: 240px;
     }
     
 }

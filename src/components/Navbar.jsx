@@ -1,38 +1,50 @@
-import { useGSAP } from "@gsap/react";
 import { Button } from "../constants";
 import styles from "../css/Navbar.module.css";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 function Navbar() {
   const navlinks = ["Me", "Experience", "About", "Project", "Contact"];
-  const liRefs = useRef([]); // Store refs in an array
-
-  const animate = (index) => {
-    const [li1, li2] = liRefs.current[index]; // Get refs for the hovered link
-    useGSAP(() => {
-      let tl = gsap.timeline();
-      tl.to(li1, {
-        transform: "rotateX(0deg)",
-        duration: 0.4,
-      }).to(
-        li2,
-        {
-          transform: "rotateX(-90deg)",
-          duration: 0.4,
-        },
-        "<"
-      );
-    });
-  };
-
   const handleClick = (e, sectionId) => {
-    e.preventDefault(); // Prevent default anchor behavior
+    e.preventDefault();
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  const logoref = useRef(null);
+  const ulref = useRef(null);
+  const buttonref = useRef(null);
+
+  useGSAP(() => {
+    let tl = gsap.timeline();
+    tl.from(
+      logoref.current,
+      {
+        duration: 1,
+        ease: "power4.out",
+        scale: 0,
+        opacity: 0,
+      },
+      "a"
+    )
+      .from(
+        ulref.current,
+        {
+          width: 0,
+          scale: 0,
+        },
+        "a"
+      )
+      .from(buttonref.current, {
+        opacity : 0,
+        duration : 1
+      },'a');
+  });
 
   return (
     <nav className={styles.container}>
@@ -43,41 +55,29 @@ function Navbar() {
         />
       </div>
       <div className={styles.left}>
-        <div className={styles.logo}>
+        <div ref={logoref} className={styles.logo}>
           <img
             src="https://raw.githubusercontent.com/NPC-MARIMO/mypf/refs/heads/main/src/assets/logo.png"
             alt=""
           />
         </div>
-        <ul>
-          {navlinks.map((link, index) => {
-            liRefs.current[index] = liRefs.current[index] || [
-              useRef(null),
-              useRef(null),
-            ];
-            return (
-              <li key={index} onMouseEnter={() => animate(index)}>
-                <a
-                  href={`#${link}`}
-                  ref={liRefs.current[index][1]}
-                  onClick={(e) => handleClick(e, link)}
-                >
-                  {link}
-                </a>
-                <a
-                  href={`#${link}`}
-                  ref={liRefs.current[index][0]}
-                  onClick={(e) => handleClick(e, link)}
-                >
-                  {link}
-                </a>
-              </li>
-            );
-          })}
+        <ul ref={ulref}>
+          {navlinks.map((link, index) => (
+            <li key={index}>
+              <a href={`#${link}`} onClick={(e) => handleClick(e, link)}>
+                {link}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.right}>
-        <Button title="Let's Talk" params="Contact" handleSendMail={e => handleClick(e, 'Contact')} />
+        <Button
+          buttonref={buttonref}
+          title="Let's Talk"
+          params="Contact"
+          handleSendMail={(e) => handleClick(e, "Contact")}
+        />
       </div>
     </nav>
   );
