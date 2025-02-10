@@ -10,6 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1024); // Check screen size
+
   const containerRef = useRef(null);
   const titleRef = useRef(null);
   const projectsRef = useRef([]);
@@ -29,29 +31,40 @@ function Projects() {
 
   const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLaptop(window.innerWidth > 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useGSAP(
     () => {
-      const ctx = gsap.context(() => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 80%",
-            end: "bottom 60%",
-            markers: false, // Debugging markers (set to true if needed)
-          },
-        });
+      if (isLaptop) { // ✅ Run animations only on laptop-sized screens
+        const ctx = gsap.context(() => {
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 80%",
+              end: "bottom 60%",
+              markers: false,
+            },
+          });
 
-        tl.from(titleRef.current, { opacity: 0, y: -30, duration: 1 })
-          .from(
-            projectsRef.current,
-            { opacity: 0, y: 50, stagger: 0.2, duration: 0.8 },
-            "-=0.5"
-          );
-      }, containerRef);
+          tl.from(titleRef.current, { opacity: 0, y: -30, duration: 1 })
+            .from(
+              projectsRef.current,
+              { opacity: 0, y: 50, stagger: 0.2, duration: 0.8 },
+              "-=0.5"
+            );
+        }, containerRef);
 
-      return () => ctx.revert(); // Cleanup animations when state changes
+        return () => ctx.revert();
+      }
     },
-    [showAllProjects] // ✅ Runs animation every time showAllProjects changes
+    [showAllProjects, isLaptop] // ✅ Re-run when screen size or project state changes
   );
 
   return (
@@ -90,3 +103,4 @@ function Projects() {
 }
 
 export default Projects;
+  

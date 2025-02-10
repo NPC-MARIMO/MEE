@@ -3,7 +3,7 @@ import GithubStats from "./GithubStats";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 
 function Hero() {
   const h3ref = useRef(null);
@@ -11,29 +11,41 @@ function Hero() {
   const contriref = useRef(null);
   const starref = useRef(null);
   const reporef = useRef(null);
-  const imageRef = useRef(null); // Ref for image animation
-  const descriptionspanrefs = useRef([]); // Array of refs for description words
+  const imageRef = useRef(null);
+  const descriptionspanrefs = useRef([]);
 
-  let heroDescription =
+  const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1024); // Check screen size
+
+  const heroDescription =
     "I'm a self-taught MERN Full-Stack Developer, who's passionate about creating creative projects";
-  let heroDescriptionSpan = heroDescription.split(" ");
+  const heroDescriptionSpan = heroDescription.split(" "); // ✅ Added this line
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLaptop(window.innerWidth > 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useGSAP(() => {
-    let tl = gsap.timeline();
-    tl.from(h3ref.current, { ease: "power4.out", opacity: 0, y: 100 }, "a")
-      .from(namespanref.current, { opacity: 0, y: 100 }, "a")
-      .from(descriptionspanrefs.current, { opacity: 0, y: 50, stagger: 0.03 })
-      .from(contriref.current, { opacity: 0, y: 10 }, "s")
-      .from(reporef.current, { opacity: 0, y: 10, delay: 0.35 }, "s")
-      .from(starref.current, { opacity: 0, y: 10, delay: 0.7 }, "s")
-      // Image animation (fade-in & scale-up)
-      .fromTo(
-        imageRef.current,
-        { opacity: 0, scale: 0 },
-        { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
-        "a"
-      );
-  });
+    if (isLaptop) {
+      const tl = gsap.timeline();
+      tl.from(h3ref.current, { ease: "power4.out", opacity: 0, y: 100 }, "a")
+        .from(namespanref.current, { opacity: 0, y: 100 }, "a")
+        .from(descriptionspanrefs.current, { opacity: 0, y: 50, stagger: 0.03 })
+        .from(contriref.current, { opacity: 0, y: 10 }, "s")
+        .from(reporef.current, { opacity: 0, y: 10, delay: 0.35 }, "s")
+        .from(starref.current, { opacity: 0, y: 10, delay: 0.7 }, "s")
+        .fromTo(
+          imageRef.current,
+          { opacity: 0, scale: 0 },
+          { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
+          "a"
+        );
+    }
+  }, [isLaptop]); // Re-run animation when screen size changes
 
   return (
     <div className={styles.me} id="Me">
@@ -73,7 +85,6 @@ function Hero() {
           </div>
         </div>
         <div ref={imageRef} className={styles.circle}>
-          {/* Animated Profile Image */}
           <img
             src="https://i.pinimg.com/736x/63/38/6c/63386c858d65101ad5ab1dca14cc4b77.jpg"
             alt="Profile"

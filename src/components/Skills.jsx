@@ -1,7 +1,7 @@
 import styles from "../css/Skills.module.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,32 +17,36 @@ function Contact() {
   const h3Ref = useRef(null);
   const logoRef = useRef(null);
 
-  useGSAP(() => {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: h3Ref.current,
-        start: "top 80%", 
-        toggleActions: "play reverse play reverse", 
-      },
-    });
+  useEffect(() => {
+    const isLargeScreen = window.innerWidth >= 1024; // Assuming 1024px as the laptop breakpoint
 
-    tl.fromTo(
-      h3Ref.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, ease: "power4.out" }
-    )
-    .fromTo(
-      logoRef.current,
-      { opacity: 0, scale: 0 },
-      { opacity: 1, scale: 1, duration: 1, ease: "elastic.out(1, 0.5)" },
-      "-=0.8"
-    )
-    .fromTo(
-      skillRefs.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.8, stagger: 0.05, ease: "power4.out" },
-      "-=0.5"
-    );
+    if (isLargeScreen) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: h3Ref.current,
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
+
+      tl.fromTo(
+        h3Ref.current,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, ease: "power4.out" }
+      )
+        .fromTo(
+          logoRef.current,
+          { opacity: 0, scale: 0 },
+          { opacity: 1, scale: 1, duration: 1, ease: "elastic.out(1, 0.5)" },
+          "-=0.8"
+        )
+        .fromTo(
+          skillRefs.current,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, stagger: 0.05, ease: "power4.out" },
+          "-=0.5"
+        );
+    }
   }, []);
 
   return (
@@ -56,7 +60,7 @@ function Contact() {
               key={skill}
               ref={(el) => (skillRefs.current[index] = el)}
               className={styles.sk}
-              style={{ display: "inline-b   lock", marginRight: "10px" }} // Ensures GSAP animates properly
+              style={{ display: "inline-block", marginRight: "10px" }}
             >
               {skill}
             </div>
