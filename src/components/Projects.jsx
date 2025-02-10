@@ -7,9 +7,18 @@ function Projects() {
   const [showAllProjects, setShowAllProjects] = useState(false);
 
   const projects = [
+    
+    {
+      title: "Metaverse",
+      idx: 1,
+      description: "A Next.js project focuses on frontend and animations using Framer Motion",
+      imageUrl: Metaverse,
+      date: "dd/mm/yyyy",
+      link: "https://hello-i-m-me.netlify.app/"
+    },
     {
       title: "Lazarev",
-      idx: 1,
+      idx: 2,
       description: "I Found this website on Awwwards.com so I decided to make it myself, this is created using HTML, CSS and JS",
       imageUrl: Lazarev,
       date: "dd/mm/yyyy",
@@ -17,7 +26,7 @@ function Projects() {
     },
     {
       title: "iPhone",
-      idx: 2,
+      idx: 3,
       description: "I made this iPhone website in my learning phase of React.js and Three.js with GSAP animation",
       imageUrl: iPhone,
       date: "dd/mm/yyyy",
@@ -25,7 +34,7 @@ function Projects() {
     },
     {
       title: "Brainwave",
-      idx: 3,
+      idx: 4,
       description: "This is Built using React.js and Framer Motion for animations ",
       imageUrl: Brainwave,
       date: "dd/mm/yyyy",
@@ -33,7 +42,7 @@ function Projects() {
     },
     {
       title: "Carrental",
-      idx: 4,
+      idx: 5,
       description: "One of my Next.js projects using Tailwind CSS, its only frontend tho",
       imageUrl: Carrental,
       date: "dd/mm/yyyy",
@@ -41,19 +50,11 @@ function Projects() {
     },
     {
       title: "Bugatti",
-      idx: 5,
+      idx: 6,
       description: "I created this for learning GSAP in React.js",
       imageUrl: Bugatti,
       date: "dd/mm/yyyy",
       link: "https://evo-bugatti.vercel.app/"
-    },
-    {
-      title: "Metaverse",
-      idx: 6,
-      description: "A Next.js project focuses on frontend and animations using Framer Motion",
-      imageUrl: Metaverse,
-      date: "dd/mm/yyyy",
-      link: "https://hello-i-m-me.netlify.app/"
     },
     {
       title: "Promptopia",
@@ -98,7 +99,7 @@ function Projects() {
         Following projects showcases my skills and experience through real world
         examples of my work. It reflects my ability to solve complex problems,
         work with different technologies.
-      </p>
+      </p> 
       <div>
         {displayedProjects.map((project) => (
           <div key={project.idx} className={styles.project}>

@@ -30,12 +30,16 @@
     margin-top: 30px;
     justify-content: space-between;
 }
-.projectimage{
+.projectimage {
     height: 13rem;
     border-radius: 10px;
-    border: 1px solid #58a6ff75;
+    /* Remove border */
+    border: none;
+    /* Add box shadow */
+    box-shadow: 0 0 10px #222;
     overflow: hidden;
 }
+
 .project{
     max-width: 350px;
 }

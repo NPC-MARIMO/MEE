@@ -69,11 +69,31 @@
     margin-top: 30px;
 }
 .linkcontainer{
-    width: 48%;
+    width: 24%;
     padding: 15px 20px;
     border: 2px solid #30363d;
     border-radius: 10px;
 }
+.status {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+      }
+  
+  .success {
+    color: #155724;
+  }
+  
+  .error {
+    color: #721c24;
+  }
+  
+  .loading {
+    color: #856404;
+  }
+  
 
 @media screen and (max-width: 720px) {
     .container>div div{
