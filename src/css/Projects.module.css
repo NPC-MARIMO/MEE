@@ -42,6 +42,7 @@
 
 .project{
     max-width: 350px;
+    margin-top: 30px;
 }
 .projectimage img{
     aspect-ratio: 16/9;

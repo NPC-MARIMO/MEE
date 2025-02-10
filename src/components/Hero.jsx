@@ -71,7 +71,7 @@ function Hero() {
             <div className={styles.stats}>
               <div ref={contriref}>
                 <div></div>
-                <h3>257 Github Contribution</h3>
+                <h3>258 Github Contribution</h3>
               </div>
               <div ref={reporef}>
                 <div></div>
