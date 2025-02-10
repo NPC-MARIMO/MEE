@@ -12,7 +12,7 @@ function    Hero() {
                 <div className={styles.stats}>
                     <div>
                         <div></div>
-                        <h3>241 Github Contribution</h3>
+                        <h3>243 Github Contribution</h3>
                     </div>
                     <div>
                         <div></div>
