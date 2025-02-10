@@ -60,9 +60,9 @@ function Contact() {
               key={skill}
               ref={(el) => (skillRefs.current[index] = el)}
               className={styles.sk}
-              style={{ display: "inline-block", marginRight: "10px" }}
+              style={{  marginRight: "10px" }}
             >
-              {skill}
+              <p>{skill}</p>
             </div>
           ))}
         </div>
