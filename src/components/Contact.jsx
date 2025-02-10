@@ -67,11 +67,9 @@ function Contact() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <div className={styles.btnContainer}>
-          {/* Send Mail Button */}
+        <div>
           <Button title="Send Mail" handleSendMail={handleSendMail} />
 
-          {/* Contact Info */}
           <div className={styles.contactInfo}>
             <div className={styles.contactItem}>
               <FaPhone className={styles.icon} />
