@@ -131,4 +131,7 @@
         flex-direction: column;
     }
 
+    .contactInfo{
+        margin-top: 50px;
+    }
 }

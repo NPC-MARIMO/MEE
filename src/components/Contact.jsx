@@ -68,7 +68,11 @@ function Contact() {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
         <div>
-          <Button title="Send Mail" handleSendMail={handleSendMail} />
+          <div>
+            {" "}
+            <Button title="Send Mail" handleSendMail={handleSendMail} />
+            {status && <p className={styles.status}>{status}</p>}
+          </div>
 
           <div className={styles.contactInfo}>
             <div className={styles.contactItem}>
@@ -81,7 +85,6 @@ function Contact() {
             </div>
           </div>
         </div>
-        {status && <p className={styles.status}>{status}</p>}
       </div>
     </div>
   );

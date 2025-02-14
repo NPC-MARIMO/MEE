@@ -5,6 +5,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef, useEffect, useState } from "react";
 
+const GITHUB_API_KEY = import.meta.env.VITE_GITHUB_API_KEY;
+const USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
+
 function Hero() {
   const h3ref = useRef(null);
   const namespanref = useRef(null);
@@ -14,11 +17,54 @@ function Hero() {
   const imageRef = useRef(null);
   const descriptionspanrefs = useRef([]);
 
-  const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1024); // Check screen size
+  const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1024);
+  const [githubStats, setGithubStats] = useState({ contributions: 0, repos: 0, stars: 0, avatarUrl: "" });
 
-  const heroDescription =
-    "I'm a self-taught MERN Full-Stack Developer, who's passionate about creating creative projects";
-  const heroDescriptionSpan = heroDescription.split(" "); // ✅ Added this line
+  useEffect(() => {
+    const fetchGithubStats = async () => {
+      const query = `
+        query {
+          user(login: "${USERNAME}") {
+            avatarUrl
+            contributionsCollection {
+              contributionCalendar {
+                totalContributions
+              }
+            }
+            repositories(ownerAffiliations: OWNER, first: 100) {
+              totalCount
+            }
+            starredRepositories {
+              totalCount
+            }
+          }
+        }
+      `;
+
+      try {
+        const response = await fetch("https://api.github.com/graphql", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${GITHUB_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query }),
+        });
+
+        const data = await response.json();
+        setGithubStats({
+          contributions: data.data.user.contributionsCollection.contributionCalendar.totalContributions,
+          repos: data.data.user.repositories.totalCount,
+          stars: data.data.user.starredRepositories.totalCount,
+          avatarUrl: data.data.user.avatarUrl,
+        });
+      } catch (error) {
+        console.error("Error fetching GitHub data:", error);
+      }
+    };
+
+    fetchGithubStats();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,7 +91,7 @@ function Hero() {
           "a"
         );
     }
-  }, [isLaptop]); // Re-run animation when screen size changes
+  }, [isLaptop]);
 
   return (
     <div className={styles.me} id="Me">
@@ -56,7 +102,7 @@ function Hero() {
           </h3>
 
           <p className={styles.description}>
-            {heroDescriptionSpan.map((word, index) => (
+            {"I'm a self-taught MERN Full-Stack Developer, who's passionate about creating creative projects, And I'm 17 years old.".split(" ").map((word, index) => (
               <span
                 key={index}
                 ref={(el) => (descriptionspanrefs.current[index] = el)}
@@ -71,22 +117,22 @@ function Hero() {
             <div className={styles.stats}>
               <div ref={contriref}>
                 <div></div>
-                <h3>258 Github Contribution</h3>
+                <h3>{githubStats.contributions} GitHub Contributions</h3>
               </div>
               <div ref={reporef}>
                 <div></div>
-                <h3>61 Repositories</h3>
+                <h3>{githubStats.repos} Repositories</h3>
               </div>
               <div ref={starref}>
                 <div></div>
-                <h3>10 Stars</h3>
+                <h3>{githubStats.stars} Stars</h3>
               </div>
             </div>
           </div>
         </div>
         <div ref={imageRef} className={styles.circle}>
           <img
-            src="https://i.pinimg.com/736x/63/38/6c/63386c858d65101ad5ab1dca14cc4b77.jpg"
+            src={githubStats.avatarUrl}
             alt="Profile"
           />
         </div>
