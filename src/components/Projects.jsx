@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "../css/Projects.module.css";
 import Button from "./Button";
-import { Brainwave, Bugatti, Carrental, EvoTrends, iPhone, Lazarev, Metaverse, Promptopia, Slider, SolarSystem } from "../constants";
+import { Brainwave, Bugatti, Carrental, Cyperfiction, EvoTrends, iPhone, Lazarev, Metaverse, Promptopia, Slider, SolarSystem } from "../constants";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -27,6 +27,7 @@ function Projects() {
     { title: "Slider", idx: 8, description: "A 3D slider effect created using just HTML & CSS", imageUrl: Slider, date: "dd/mm/yyyy", link: "https://one-peice-evo-slider.vercel.app/" },
     { title: "Solar System", idx: 9, description: "A Three.js project simulating the solar system", imageUrl: SolarSystem, date: "dd/mm/yyyy", link: "https://solar-system-murex-ten.vercel.app/" },
     { title: "Evo Trends", idx: 10, description: "A MERN full-stack project for buying and selling products", imageUrl: EvoTrends, date: "dd/mm/yyyy", link: "https://evo-trends-ecms.vercel.app/" },
+    { title: "Cyperfiction", idx: 11, description: "A Animated project using HTML, CSS and JS ", imageUrl: Cyperfiction, date: "dd/mm/yyyy", link: "https://cyperfiction-by-mosshead.vercel.app/"}
   ];
 
   const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);

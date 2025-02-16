@@ -19,6 +19,7 @@ import Bugatti from '../assets/Projects/bugatti.png'
 import Promptopia from '../assets/Projects/promptopia.png'
 import Slider from '../assets/Projects/slider.png'
 import SolarSystem from '../assets/Projects/solarsystem.png'
+import Cyperfiction from '../assets/Projects/cyperfiction.png'
 export {
     Navbar,
     Hero,
@@ -30,7 +31,7 @@ export {
     Footer,
     Button,
     GithubStats ,
-
+    Cyperfiction,
     Lazarev,
     iPhone,
     Brainwave,
