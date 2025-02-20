@@ -92,6 +92,24 @@ function Hero() {
         );
     }
   }, [isLaptop]);
+  
+  const getExactYearsDifference = (dateString) => {
+    const givenDate = new Date(dateString);
+    const currentDate = new Date();
+    
+    let years = currentDate.getFullYear() - givenDate.getFullYear();
+    const monthDiff = currentDate.getMonth() - givenDate.getMonth();
+    const dayDiff = currentDate.getDate() - givenDate.getDate();
+    
+    // Adjust if the birthday hasn't occurred yet this year
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+      years--;
+    }
+    
+    return years;
+  };
+
+  const myAge = getExactYearsDifference("2007-08-09");
 
   return (
     <div className={styles.me} id="Me">
@@ -102,7 +120,7 @@ function Hero() {
           </h3>
 
           <p className={styles.description}>
-            {"I'm a self-taught MERN Full-Stack Developer, who's passionate about creating creative projects, And I'm 17 years old.".split(" ").map((word, index) => (
+            {`I'm a self-taught MERN Full-Stack Developer, who's passionate about creating creative projects, And I'm ${myAge} years old.`.split(" ").map((word, index) => (
               <span
                 key={index}
                 ref={(el) => (descriptionspanrefs.current[index] = el)}
