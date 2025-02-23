@@ -40,8 +40,7 @@ function Contact() {
     <div id="Contact" className={styles.container}>
       <h3 className={styles.title}>Contact</h3>
       <p className={styles.description}>
-        Any doubts or anything you want to discuss? Contact me using social
-        media or mail.
+      Have any questions or want to discuss something? Reach out via social media or email
       </p>
 
       <div>
@@ -70,7 +69,7 @@ function Contact() {
         <div>
           <div>
             {" "}
-            <Button title="Send Mail" handleSendMail={handleSendMail} />
+            <Button title="Let's Talk" handleSendMail={handleSendMail} />
             {status && <p className={styles.status}>{status}</p>}
           </div>
 
@@ -81,7 +80,8 @@ function Contact() {
             </div>
             <div className={styles.contactItem}>
               <FaEnvelope className={styles.icon} />
-              <p>shivangbhaiisgreat@gmail.com</p>
+              <a href="mailto:shivangbhaiisgreat@gmail.com">shivangbhaiisgreat@gmail.com</a>
+
             </div>
           </div>
         </div>

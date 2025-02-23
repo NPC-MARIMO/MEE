@@ -120,7 +120,7 @@ function Hero() {
           </h3>
 
           <p className={styles.description}>
-            {`I'm a self-taught MERN Full-Stack Developer, who's passionate about creating creative projects, And I'm ${myAge} years old.`.split(" ").map((word, index) => (
+            {`I'm a self-taught MERN Full-Stack Developer, who's passionate about building creative projects, And I'm ${myAge} years old.`.split(" ").map((word, index) => (
               <span
                 key={index}
                 ref={(el) => (descriptionspanrefs.current[index] = el)}

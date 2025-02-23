@@ -18,16 +18,16 @@ function Projects() {
 
   const projects = [
     { title: "Metaverse", idx: 1, description: "A Next.js project focusing on frontend and animations using Framer Motion", imageUrl: Metaverse, date: "dd/mm/yyyy", link: "https://hello-i-m-me.netlify.app/" },
-    { title: "Lazarev", idx: 2, description: "A recreation of a website from Awwwards.com using HTML, CSS, and JS", imageUrl: Lazarev, date: "dd/mm/yyyy", link: "https://mosshead-lazarev.vercel.app/" },
-    { title: "iPhone", idx: 3, description: "Built while learning React.js and Three.js with GSAP animations", imageUrl: iPhone, date: "dd/mm/yyyy", link: "https://i-phone-chi.vercel.app/" },
+    { title: "Lazarev", idx: 2, description: "A pixel-perfect recreation of an award-winning website using HTML, CSS, and JavaScript.", imageUrl: Lazarev, date: "dd/mm/yyyy", link: "https://mosshead-lazarev.vercel.app/" },
+    { title: "iPhone", idx: 3, description: "A React.js and Three.js project featuring GSAP animations, built as part of my learning journey", imageUrl: iPhone, date: "dd/mm/yyyy", link: "https://i-phone-chi.vercel.app/" },
     { title: "Brainwave", idx: 4, description: "Created using React.js and Framer Motion for animations", imageUrl: Brainwave, date: "dd/mm/yyyy", link: "https://my-brainwave.vercel.app/" },
     { title: "Carrental", idx: 5, description: "A Next.js frontend project using Tailwind CSS", imageUrl: Carrental, date: "dd/mm/yyyy", link: "https://evo-carrental.vercel.app/" },
-    { title: "Bugatti", idx: 6, description: "Built to practice GSAP animations in React.js", imageUrl: Bugatti, date: "dd/mm/yyyy", link: "https://evo-bugatti.vercel.app/" },
+    { title: "Bugatti", idx: 6, description: "A GSAP-powered animation project built in React.js.", imageUrl: Bugatti, date: "dd/mm/yyyy", link: "https://evo-bugatti.vercel.app/" },
     { title: "Promptopia", idx: 7, description: "A Next.js full-stack app where users can share and read prompts", imageUrl: Promptopia, date: "dd/mm/yyyy", link: "https://evo-m-promptopia.vercel.app/" },
     { title: "Slider", idx: 8, description: "A 3D slider effect created using just HTML & CSS", imageUrl: Slider, date: "dd/mm/yyyy", link: "https://one-peice-evo-slider.vercel.app/" },
-    { title: "Solar System", idx: 9, description: "A Three.js project simulating the solar system", imageUrl: SolarSystem, date: "dd/mm/yyyy", link: "https://solar-system-murex-ten.vercel.app/" },
-    { title: "Evo Trends", idx: 10, description: "A MERN full-stack project for buying and selling products", imageUrl: EvoTrends, date: "dd/mm/yyyy", link: "https://evo-trends-ecms.vercel.app/" },
-    { title: "Cyperfiction", idx: 11, description: "A Animated project using HTML, CSS and JS ", imageUrl: Cyperfiction, date: "dd/mm/yyyy", link: "https://cyperfiction-by-mosshead.vercel.app/"}
+    { title: "Solar System", idx: 9, description: "A Three.js simulation of the solar system with interactive elements", imageUrl: SolarSystem, date: "dd/mm/yyyy", link: "https://solar-system-murex-ten.vercel.app/" },
+    { title: "Evo Trends", idx: 10, description: "A MERN-based e-commerce platform for buying and selling products", imageUrl: EvoTrends, date: "dd/mm/yyyy", link: "https://evo-trends-ecms.vercel.app/" },
+    { title: "Cyperfiction", idx: 11, description: "An Animated project using HTML, CSS and JS ", imageUrl: Cyperfiction, date: "dd/mm/yyyy", link: "https://cyperfiction-by-mosshead.vercel.app/"}
   ];
 
   const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
