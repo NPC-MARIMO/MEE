@@ -84,7 +84,6 @@ function Hero({ startAnimation }) {
 
   useGSAP(() => {
     if (startAnimation) {
-      if (isLaptop) {
         const tl = gsap.timeline();
         tl.from(h3ref.current, { ease: "power4.out", opacity: 0, y: 100 }, "a")
           .from(namespanref.current, { opacity: 0, y: 100 }, "a")
@@ -103,8 +102,8 @@ function Hero({ startAnimation }) {
             "a"
           );
       }
-    }
-  }, [isLaptop]);
+    
+  }, []);
 
   const getExactYearsDifference = (dateString) => {
     const givenDate = new Date(dateString);
