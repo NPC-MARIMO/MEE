@@ -1,0 +1,40 @@
+.container{
+    width: 100vw;
+    min-width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0D1117;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999999;
+}
+.loader>div{
+    display: flex;
+}
+.logo{
+    width: 100px;
+    object-fit: cover;
+}
+.loadingtext{
+    font-size: 30px;
+    padding-left: 10px;
+    border-left: 1px solid #fff;
+}
+.loadingcontainer{
+    height: 2px;
+    width: 100%;
+    background: #3D4145;
+}
+ 
+.imagecontainer, .loadingtitlecontainer, .loadingcontainer{
+    overflow: hidden;
+}
+
+.loading{
+    width: 100%;
+    background: #58A6FF;
+    height: 100%;
+}

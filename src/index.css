@@ -16,3 +16,13 @@ html, body{
   display: none;
 }
 
+/* fonts */
+@font-face {
+  font-family: "glacialindifference-regular";
+  src: url('../assets/fonts/GlacialIndifference-Regular.otf');
+}
+
+@font-face {
+  font-family: "glacialindifference-bold";
+  src: url('../assets/fonts/GlacialIndifference-Bold.otf');
+}

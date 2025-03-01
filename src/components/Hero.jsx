@@ -8,7 +8,7 @@ import { useRef, useEffect, useState } from "react";
 const GITHUB_API_KEY = import.meta.env.VITE_GITHUB_API_KEY;
 const USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
 
-function Hero() {
+function Hero({ startAnimation }) {
   const h3ref = useRef(null);
   const namespanref = useRef(null);
   const contriref = useRef(null);
@@ -18,7 +18,12 @@ function Hero() {
   const descriptionspanrefs = useRef([]);
 
   const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1024);
-  const [githubStats, setGithubStats] = useState({ contributions: 0, repos: 0, stars: 0, avatarUrl: "" });
+  const [githubStats, setGithubStats] = useState({
+    contributions: 0,
+    repos: 0,
+    stars: 0,
+    avatarUrl: "",
+  });
 
   useEffect(() => {
     const fetchGithubStats = async () => {
@@ -53,7 +58,9 @@ function Hero() {
 
         const data = await response.json();
         setGithubStats({
-          contributions: data.data.user.contributionsCollection.contributionCalendar.totalContributions,
+          contributions:
+            data.data.user.contributionsCollection.contributionCalendar
+              .totalContributions,
           repos: data.data.user.repositories.totalCount,
           stars: data.data.user.starredRepositories.totalCount,
           avatarUrl: data.data.user.avatarUrl,
@@ -77,35 +84,41 @@ function Hero() {
 
   useGSAP(() => {
     if (isLaptop) {
-      const tl = gsap.timeline();
-      tl.from(h3ref.current, { ease: "power4.out", opacity: 0, y: 100 }, "a")
-        .from(namespanref.current, { opacity: 0, y: 100 }, "a")
-        .from(descriptionspanrefs.current, { opacity: 0, y: 50, stagger: 0.03 })
-        .from(contriref.current, { opacity: 0, y: 10 }, "s")
-        .from(reporef.current, { opacity: 0, y: 10, delay: 0.35 }, "s")
-        .from(starref.current, { opacity: 0, y: 10, delay: 0.7 }, "s")
-        .fromTo(
-          imageRef.current,
-          { opacity: 0, scale: 0 },
-          { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
-          "a"
-        );
+      if (startAnimation) {
+        const tl = gsap.timeline();
+        tl.from(h3ref.current, { ease: "power4.out", opacity: 0, y: 100 }, "a")
+          .from(namespanref.current, { opacity: 0, y: 100 }, "a")
+          .from(descriptionspanrefs.current, {
+            opacity: 0,
+            y: 50,
+            stagger: 0.03,
+          })
+          .from(contriref.current, { opacity: 0, y: 10 }, "s")
+          .from(reporef.current, { opacity: 0, y: 10, delay: 0.35 }, "s")
+          .from(starref.current, { opacity: 0, y: 10, delay: 0.7 }, "s")
+          .fromTo(
+            imageRef.current,
+            { opacity: 0, scale: 0 },
+            { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
+            "a"
+          );
+      }
     }
   }, [isLaptop]);
-  
+
   const getExactYearsDifference = (dateString) => {
     const givenDate = new Date(dateString);
     const currentDate = new Date();
-    
+
     let years = currentDate.getFullYear() - givenDate.getFullYear();
     const monthDiff = currentDate.getMonth() - givenDate.getMonth();
     const dayDiff = currentDate.getDate() - givenDate.getDate();
-    
+
     // Adjust if the birthday hasn't occurred yet this year
     if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
       years--;
     }
-    
+
     return years;
   };
 
@@ -120,15 +133,17 @@ function Hero() {
           </h3>
 
           <p className={styles.description}>
-            {`I'm a self-taught MERN Full-Stack Developer, who's passionate about building creative projects, And I'm ${myAge} years old.`.split(" ").map((word, index) => (
-              <span
-                key={index}
-                ref={(el) => (descriptionspanrefs.current[index] = el)}
-                style={{ display: "inline-block", marginRight: "5px" }}
-              >
-                {word}
-              </span>
-            ))}
+            {`I'm a self-taught MERN Full-Stack Developer, who's passionate about building creative projects, And I'm ${myAge} years old.`
+              .split(" ")
+              .map((word, index) => (
+                <span
+                  key={index}
+                  ref={(el) => (descriptionspanrefs.current[index] = el)}
+                  style={{ display: "inline-block", marginRight: "5px" }}
+                >
+                  {word}
+                </span>
+              ))}
           </p>
 
           <div className={styles.container}>
@@ -149,10 +164,7 @@ function Hero() {
           </div>
         </div>
         <div ref={imageRef} className={styles.circle}>
-          <img
-            src={githubStats.avatarUrl}
-            alt="Profile"
-          />
+          <img src={githubStats.avatarUrl} alt="Profile" />
         </div>
       </div>
       <div className={styles.githubcontri}>
