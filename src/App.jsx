@@ -29,7 +29,7 @@ function App() {
       <main>
         <Navbar />
         <div className="container">
-          {showLoading ? <Loading /> : <Hero startAnimation={startAnimation} />}
+          <Hero />
           <Experience />
           <Skills />
           <About />

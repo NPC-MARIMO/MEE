@@ -8,7 +8,7 @@ import { useRef, useEffect, useState } from "react";
 const GITHUB_API_KEY = import.meta.env.VITE_GITHUB_API_KEY;
 const USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
 
-function Hero({ startAnimation }) {
+function Hero() {
   const h3ref = useRef(null);
   const namespanref = useRef(null);
   const contriref = useRef(null);
@@ -83,27 +83,26 @@ function Hero({ startAnimation }) {
   }, []);
 
   useGSAP(() => {
-    if (startAnimation) {
-        const tl = gsap.timeline();
-        tl.from(h3ref.current, { ease: "power4.out", opacity: 0, y: 100 }, "a")
-          .from(namespanref.current, { opacity: 0, y: 100 }, "a")
-          .from(descriptionspanrefs.current, {
-            opacity: 0,
-            y: 50,
-            stagger: 0.03,
-          })
-          .from(contriref.current, { opacity: 0, y: 10 }, "s")
-          .from(reporef.current, { opacity: 0, y: 10, delay: 0.35 }, "s")
-          .from(starref.current, { opacity: 0, y: 10, delay: 0.7 }, "s")
-          .fromTo(
-            imageRef.current,
-            { opacity: 0, scale: 0 },
-            { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
-            "a"
-          );
-      }
-    
-  }, []);
+    if (isLaptop) {
+      const tl = gsap.timeline();
+      tl.from(h3ref.current, { ease: "power4.out", opacity: 0, y: 100 }, "a")
+        .from(namespanref.current, { opacity: 0, y: 100 }, "a")
+        .from(descriptionspanrefs.current, {
+          opacity: 0,
+          y: 50,
+          stagger: 0.03,
+        })
+        .from(contriref.current, { opacity: 0, y: 10 }, "s")
+        .from(reporef.current, { opacity: 0, y: 10, delay: 0.35 }, "s")
+        .from(starref.current, { opacity: 0, y: 10, delay: 0.7 }, "s")
+        .fromTo(
+          imageRef.current,
+          { opacity: 0, scale: 0 },
+          { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
+          "a"
+        );
+    }
+  }, [isLaptop]);
 
   const getExactYearsDifference = (dateString) => {
     const givenDate = new Date(dateString);
