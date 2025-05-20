@@ -120,7 +120,7 @@ function Hero() {
     return years;
   };
 
-  const myAge = getExactYearsDifference("2006-08-09");
+  const myAge = getExactYearsDifference("2007-08-09");
 
   return (
     <div className={styles.me} id="Me">
