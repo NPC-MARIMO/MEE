@@ -17,7 +17,7 @@ function Footer() {
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCRY-_1KUebBLAmg_KU3HznHFhBdKbZOQ9qg&s" alt="linkedin" />
         </a>
       </div>
-      <p className={styles.description}>2025 All rights reserved</p>
+      <p className={styles.description}>© 2025 — Built with chaos & code</p>
     </div>
   );
 }
