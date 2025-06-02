@@ -7,7 +7,7 @@ import { useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 function Navbar() {
-  const navlinks = ["Me", "Experience", "About", "Project", "Contact"];
+  const navlinks = ["Me", "About", "Project", "Contact"];
   const handleClick = (e, sectionId) => {
     e.preventDefault();
     const section = document.getElementById(sectionId);
