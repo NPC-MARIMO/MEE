@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import About from "../components/About";
 import Projects from "../components/Projects"
@@ -23,7 +22,6 @@ import Cyperfiction from '../assets/Projects/cyperfiction.png'
 export {
     Navbar,
     Hero,
-    Experience,
     Skills,
     About,
     Projects,
