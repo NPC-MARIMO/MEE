@@ -40,7 +40,7 @@ function Contact() {
     <div id="Contact" className={styles.container}>
       <h3 className={styles.title}>Contact</h3>
       <p className={styles.description}>
-      Have any questions or want to discuss something? Reach out via social media or email
+      Got an idea, project, or just wanna vibe about code? I’m all ears.
       </p>
 
       <div>
@@ -69,7 +69,7 @@ function Contact() {
         <div>
           <div>
             {" "}
-            <Button title="Let's Talk" handleSendMail={handleSendMail} />
+            <Button title="Drop Message" handleSendMail={handleSendMail} />
             {status && <p className={styles.status}>{status}</p>}
           </div>
 

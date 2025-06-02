@@ -34,8 +34,8 @@
     font-size: 15rem;
     color: #161b22;
     user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
+  -webkit-user-select: none;
+  -moz-user-select: none;  
   -ms-user-select: none; 
 }
 
