@@ -76,7 +76,7 @@ function Contact() {
           <div className={styles.contactInfo}>
             <div className={styles.contactItem}>
               <FaPhone className={styles.icon} />
-              <p>7905358167</p>
+              <a href="tel:7905358167">7905358167</a>
             </div>
             <div className={styles.contactItem}>
               <FaEnvelope className={styles.icon} />
