@@ -1,7 +1,6 @@
 import {
   About,
   Contact,
-  Experience,
   Footer,
   Hero,
   Navbar,
@@ -30,7 +29,6 @@ function App() {
         <Navbar />
         <div className="container">
           <Hero />
-          <Experience />
           <Skills />
           <About />
           <Projects />
