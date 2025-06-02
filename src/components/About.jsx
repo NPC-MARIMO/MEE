@@ -5,7 +5,8 @@ function About() {
     <div className={styles.container} id="About">
       <h1 className={styles.title}>About</h1>
       <p className={styles.description}>
-     I’m a Full-Stack Web & App Developer with a focus on JavaScript, React.js, Next.js, and Three.js. Also a web designer with an eye for sleek UI.
+     Started coding in Feb 2024. Built stuff, broke stuff, learned fast.
+Now vibing with frontend, backend, APIs, SSR/CSR, proxies & more.
       </p>
       <p style={{ marginTop: 30 }} className={styles.description}>
         I’m driven, always leveling up my skills, and love sharing knowledge along the way.
