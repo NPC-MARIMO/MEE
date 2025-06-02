@@ -69,7 +69,7 @@ function Contact() {
         <div>
           <div>
             {" "}
-            <Button title="Drop Message" handleSendMail={handleSendMail} />
+            <Button title="Say Hii!" handleSendMail={handleSendMail} />
             {status && <p className={styles.status}>{status}</p>}
           </div>
 
