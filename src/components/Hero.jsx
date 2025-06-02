@@ -133,7 +133,7 @@ function Hero() {
           <p classname={styles.description} > - Building chaos into code</p>
 
           <p className={styles.description}>
-            {`I'm a self-taught MERN Full-Stack Developer passionate about building creative, impactful projects — and yeah, I'm {myAge}.`
+            {`I'm a self-taught MERN Full-Stack Developer passionate about building creative, impactful projects — and yeah, I'm ${myAge}.`
               .split(" ")
               .map((word, index) => (
                 <span
