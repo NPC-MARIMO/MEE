@@ -120,7 +120,7 @@ function Hero() {
     return years;
   };
 
-  const myAge = getExactYearsDifference("2007-08-09");
+  const myAge = getExactYearsDifference("2006-08-09");
 
   return (
     <div className={styles.me} id="Me">
@@ -131,7 +131,7 @@ function Hero() {
           </h3>
 
           <p className={styles.description}>
-            {`I'm a self-taught MERN Full-Stack Developer, who's passionate about building creative projects, And I'm ${myAge} years old.`
+            {`I'm a self-taught MERN Full-Stack Developer passionate about building creative, impactful projects — and yeah, I'm {myAge}.`
               .split(" ")
               .map((word, index) => (
                 <span
