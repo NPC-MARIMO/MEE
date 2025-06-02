@@ -12,7 +12,7 @@ function Contact() {
 
   const handleSendMail = async () => {
     if (!name || !email || !message) {
-      setStatus("Please fill in all fields.");
+      setStatus("Please fill in all fields."); 
       return;
     }
 
@@ -56,7 +56,7 @@ function Contact() {
             className={styles.input}
             type="text"
             placeholder="Email"
-            value={email}
+            value={email} 
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -76,7 +76,7 @@ function Contact() {
           <div className={styles.contactInfo}>
             <div className={styles.contactItem}>
               <FaPhone className={styles.icon} />
-              <a href="tel:7905358167">7905358167</a>
+              <a href="tel:7905358167">7905358167</a> 
             </div>
             <div className={styles.contactItem}>
               <FaEnvelope className={styles.icon} />
