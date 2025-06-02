@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 function Experience() {
   const h3ref = useRef(null);
 
-  const para1 = "I started my coding journey in February 2024, working on various personal projects and learning a lot along the way.";
-  const para2 = "During this time, I’ve gained experience in frontend and backend development, RESTful APIs, SSR/CSR, reverse proxies, and more";
+  const para1 = "Started coding in Feb 2024. Built stuff, broke stuff, learned fast.";
+  const para2 = "Now vibing with frontend, backend, APIs, SSR/CSR, proxies & more.";
 
   const para1Words = para1.split(" ");
   const para2Words = para2.split(" ");
