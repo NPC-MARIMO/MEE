@@ -130,6 +130,8 @@ function Hero() {
             Hi, I am <span ref={namespanref}> Shivang Pandey </span>
           </h3>
 
+          <p classname={styles.description} >Building chaos into code</p>
+
           <p className={styles.description}>
             {`I'm a self-taught MERN Full-Stack Developer passionate about building creative, impactful projects — and yeah, I'm {myAge}.`
               .split(" ")
