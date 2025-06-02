@@ -1,6 +1,7 @@
 import styles from "../css/footer.module.css";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <div className={styles.container}>
       <div>
@@ -17,7 +18,7 @@ function Footer() {
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCRY-_1KUebBLAmg_KU3HznHFhBdKbZOQ9qg&s" alt="linkedin" />
         </a>
       </div>
-      <p className={styles.description}>© 2025 — Built with chaos & code</p>
+      <p className={styles.description}>© {currentYear} — Built with chaos & code</p>
     </div>
   );
 }
