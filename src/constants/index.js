@@ -13,6 +13,7 @@ import iPhone from '../assets/Projects/iphone.png'
 import Brainwave from '../assets/Projects/brainwave.png'
 import Carrental from '../assets/Projects/carrental.png'
 import EvoTrends from '../assets/Projects/evotrends.png'
+import EvoVault from '../assets/Projects/evovault.png'
 import Metaverse from '../assets/Projects/metaverse.png'
 import Bugatti from '../assets/Projects/bugatti.png'
 import Promptopia from '../assets/Projects/promptopia.png'
@@ -36,6 +37,7 @@ export {
     Carrental,
     EvoTrends,
     Metaverse,
+    EvoVault,
     Bugatti,
     Promptopia,
     Slider,
