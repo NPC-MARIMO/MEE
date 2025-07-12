@@ -1,64 +1,187 @@
-/* fonts */
-@font-face {
-    font-family: "glacialindifference-regular";
-    src: url('../assets/fonts/GlacialIndifference-Regular.otf');
-}
-@font-face {
-    font-family: "glacialindifference-bold";
-    src: url('../assets/fonts/GlacialIndifference-Bold.otf');
+/* Projects.module.css */
+.container {
+    margin-top: 150px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title {
     font-family: 'glacialindifference-bold';
     color: #30363d;
-    font-size: 40px;
+    font-size: 4rem;
+    margin-bottom: 30px;
+    position: relative;
 }
 
-.container {
-    margin-top: 100px;
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #30363d, transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: titleUnderline 1s ease forwards 0.5s;
 }
 
-.description{
-    margin-top: 30px;
+@keyframes titleUnderline {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.subtitle {
+    font-size: 2rem;
+    color: #30363d;
+    margin-top: 20px;
+    font-family: 'glacialindifference-bold';
+}
+
+.description {
+    margin-top: 20px;
     letter-spacing: 1px;
-    font-size: 28px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 900px;
 }
 
-.container>div{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    justify-content: space-between;
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
 }
-.projectimage {
-    height: 13rem;
-    border-radius: 10px;
-    /* Remove border */
-    border: none;
-    /* Add box shadow */
-    box-shadow: 0 0 10px #222;
+
+.projectCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border: 1px solid #58a6ff76;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.projectImageContainer {
+    position: relative;
+    height: 220px;
     overflow: hidden;
 }
 
-.project{
-    max-width: 350px;
-    margin-top: 30px;
-}
-.projectimage img{
-    aspect-ratio: 16/9;
+.projectImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
 }
-.projecttitle{
-    font-size: 25px;
-    padding: 10px;
+
+.projectLink:hover .projectImage {
+    transform: scale(1.05);
+}
+
+.projectOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(22, 27, 34, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projectLink:hover .projectOverlay {
+    opacity: 1;
+}
+
+.viewProject {
+    color: white;
     font-family: 'glacialindifference-bold';
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 50px;
 }
-.projectdate{
-    font-size: 15px;
-    padding: 0 10px;
+
+.projectContent {
+    padding: 25px;
 }
-.projectdescription{
-    padding: 10px 10px;
+
+.projectTitle {
+    font-size: 1.5rem;
+    font-family: 'glacialindifference-bold';
+    margin-bottom: 10px;
+    color: #30363d;
+}
+.projectImage{
+    border-radius: 5px;
+}
+
+.projectDate {
+    font-size: 0.9rem;
+    color: #6e7681;
+    margin-bottom: 15px;
+}
+
+.projectDescription {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #dadada;
+}
+
+.buttonContainer {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 5%;
+    }
+
+    .projectsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .projectImageContainer {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projectsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
 }

@@ -1,26 +1,310 @@
-/* fonts */
-@font-face {
-    font-family: "glacialindifference-regular";
-    src: url('../assets/fonts/GlacialIndifference-Regular.otf');
-}
-
-@font-face {
-    font-family: "glacialindifference-bold";
-    src: url('../assets/fonts/GlacialIndifference-Bold.otf');
-}
-
+/* About.module.css */
 .container {
-    margin-top: 100px;
+    margin-top: 150px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title {
     font-family: 'glacialindifference-bold';
     color: #30363d;
-    font-size: 45px;
-    margin-bottom : 50px;
+    font-size: 4rem;
+    margin-bottom: 80px;
+    position: relative;
+    display: inline-block;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #58a6ff, transparent);
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: titleUnderline 1.5s ease forwards 0.5s;
+}
+
+@keyframes titleUnderline {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.timelineContainer {
+    position: relative;
+    /* padding-left: 100px; */
+}
+
+.timelineLine {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #58a6ff, transparent);
+    z-index: -1;
+}
+
+.section {
+    position: relative;
+    margin-bottom: 120px;
+    padding: 60px 100px;
+    border-radius: 24px;
+    background: rgba(22, 27, 34, 0.6);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), transparent);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.section:hover::before {
+    opacity: 1;
+}
+
+.section1:hover {
+    border-color: rgba(136, 192, 255, 0.3);
+}
+
+.section2:hover {
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.section3:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sectionContent {
+    position: relative;
+    z-index: 2;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.sectionNumber {
+    font-family: 'glacialindifference-bold';
+    font-size: 1.8rem;
+    color: #58a6ff;
+    margin-right: 40px;
+    position: absolute;
+    left: -80px;
+    background: rgba(22, 27, 34, 0.9);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #58a6ff;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+}
+
+.titleWrapper {
+    flex: 1;
+}
+
+.sectionTitle {
+    font-family: 'glacialindifference-bold';
+    font-size: 2.5rem;
+    color: white;
+    margin: 0 0 10px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.titleUnderline {
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, #58a6ff, transparent);
+    transition: width 0.8s ease 0.3s;
+}
+
+.section:hover .titleUnderline {
+    width: 100%;
+}
+
+.emoji {
+    font-size: 3rem;
+    margin-left: 30px;
+    transition: transform 0.5s ease;
+}
+
+.section:hover .emoji {
+    transform: rotate(15deg) scale(1.2);
 }
 
 .description {
-    letter-spacing: 1px;
-    font-size: 30px;
+    letter-spacing: 0.5px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding-left: 40px;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.section:hover .description {
+    transform: translateX(10px);
+}
+
+.description::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, #58a6ff, transparent);
+    transition: height 0.8s ease;
+}
+
+.section:hover .description::before {
+    height: 120%;
+}
+
+.hoverReveal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.section:hover .hoverReveal {
+    opacity: 0.2;
+}
+
+.hoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    opacity: 0.7;
+}
+
+.hoverGlow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center,
+            rgba(88, 166, 255, 0.2) 0%,
+            transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.section:hover .hoverGlow {
+    opacity: 1;
+}
+
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 4rem;
+    }
+
+    .section {
+        padding: 40px 100px;
+    }
+
+    .sectionTitle {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .hoverReveal {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3.2rem;
+        margin-bottom: 70px;
+    }
+
+    .timelineLine {
+        display: none;
+    }
+
+    .section {
+        padding: 30px;
+        margin-bottom: 80px;
+    }
+
+    .sectionNumber {
+        position: static;
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .sectionHeader {
+        flex-wrap: wrap;
+    }
+
+    .emoji {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .description {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
 }
