@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -75,29 +75,56 @@ function Skills() {
 
   const [activeCategory, setActiveCategory] = useState("all");
   const [showAll, setShowAll] = useState(false); // 👈 track View All/Hide toggle
+  const [isMobile, setIsMobile] = useState(false);
   const containerRef = useRef(null);
   const titleRef = useRef(null);
   const categoryRefs = useRef([]);
   const skillRefs = useRef([]);
 
+  // Handle responsive breakpoints
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Set initial state
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useGSAP(() => {
     categoryRefs.current = [];
     skillRefs.current = [];
 
+    // Get screen width for responsive settings
+    // const isMobile = window.innerWidth <= 768; // This line is now redundant
+    // const isTablet = window.innerWidth <= 1024; // This line is now redundant
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 80%",
-        end: "bottom 20%",
+        start: isMobile ? "top 90%" : "top 80%",
+        end: isMobile ? "bottom 10%" : "bottom 20%",
         toggleActions: "play none none reverse",
+        // Add responsive settings
+        markers: false,
+        scrub: false,
+        // Adjust for mobile performance
+        fastScrollEnd: isMobile,
+        preventOverlaps: true,
       },
     });
 
     if (titleRef.current) {
       tl.from(titleRef.current, {
         opacity: 0,
-        y: 30,
-        duration: 0.6,
+        y: isMobile ? 20 : 30,
+        duration: isMobile ? 0.4 : 0.6,
         ease: "power2.out",
       });
     }
@@ -108,12 +135,12 @@ function Skills() {
         validCategoryRefs,
         {
           opacity: 0,
-          y: 20,
-          duration: 0.5,
-          stagger: 0.1,
+          y: isMobile ? 15 : 20,
+          duration: isMobile ? 0.3 : 0.5,
+          stagger: isMobile ? 0.05 : 0.1,
           ease: "power2.out",
         },
-        "-=0.3"
+        isMobile ? "-=0.2" : "-=0.3"
       );
     }
 
@@ -124,19 +151,19 @@ function Skills() {
         validSkillRefs,
         {
           opacity: 0,
-          y: 20,
-          duration: 0.5,
-          stagger: 0.05,
+          y: isMobile ? 15 : 20,
+          duration: isMobile ? 0.3 : 0.5,
+          stagger: isMobile ? 0.03 : 0.05,
           ease: "power2.out",
         },
-        "-=0.2"
+        isMobile ? "-=0.1" : "-=0.2"
       );
     }
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [activeCategory, showAll]); // Remove displayedSkills.length dependency
+  }, [activeCategory, showAll, isMobile]); // Add isMobile to dependencies
 
   const filteredSkills =
     activeCategory === "all"
