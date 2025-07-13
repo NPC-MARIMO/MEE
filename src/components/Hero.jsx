@@ -16,6 +16,7 @@ function Hero() {
   const reporef = useRef(null);
   const imageRef = useRef(null);
   const descriptionspanrefs = useRef([]);
+  const taglineRef = useRef(null); // Add ref for the tagline
 
   const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1024);
   const [githubStats, setGithubStats] = useState({
@@ -87,6 +88,12 @@ function Hero() {
       const tl = gsap.timeline();
       tl.from(h3ref.current, { ease: "power4.out", opacity: 0, y: 100 }, "a")
         .from(namespanref.current, { opacity: 0, y: 100 }, "a")
+        .from(taglineRef.current, { 
+          opacity: 0, 
+          y: 30, 
+          duration: 0.8, 
+          ease: "power2.out" 
+        }, "a+=0.2")
         .from(descriptionspanrefs.current, {
           opacity: 0,
           y: 50,
@@ -100,6 +107,53 @@ function Hero() {
           { opacity: 0, scale: 0 },
           { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
           "a"
+        );
+    } else {
+      // Mobile animations
+      const tl = gsap.timeline();
+      tl.from(h3ref.current, { 
+        ease: "power3.out", 
+        opacity: 0, 
+        y: 50, 
+        duration: 0.6 
+      })
+        .from(namespanref.current, { 
+          opacity: 0, 
+          y: 50, 
+          duration: 0.6 
+        }, "-=0.3")
+        .from(taglineRef.current, { 
+          opacity: 0, 
+          y: 20, 
+          duration: 0.6, 
+          ease: "power2.out" 
+        }, "-=0.2")
+        .from(descriptionspanrefs.current, {
+          opacity: 0,
+          y: 30,
+          stagger: 0.02,
+          duration: 0.5,
+        }, "-=0.1")
+        .from(contriref.current, { 
+          opacity: 0, 
+          y: 10, 
+          duration: 0.4 
+        }, "-=0.1")
+        .from(reporef.current, { 
+          opacity: 0, 
+          y: 10, 
+          duration: 0.4 
+        }, "-=0.2")
+        .from(starref.current, { 
+          opacity: 0, 
+          y: 10, 
+          duration: 0.4 
+        }, "-=0.2")
+        .fromTo(
+          imageRef.current,
+          { opacity: 0, scale: 0.8 },
+          { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" },
+          "-=0.3"
         );
     }
   }, [isLaptop]);
@@ -130,7 +184,7 @@ function Hero() {
             Hi, I am <span ref={namespanref}> Shivang Pandey </span>
           </h3>
 
-          <p classname={styles.description}> - Building Chaos into Code</p>
+          <p ref={taglineRef} className={styles.description}> - Building Chaos into Code</p>
 
           <p className={styles.description}>
             {`🌕 I am a self-taught conjurer of the MERN stack —

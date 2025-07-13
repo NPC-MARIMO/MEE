@@ -15,6 +15,7 @@ import Carrental from '../assets/Projects/carrental.png'
 import EvoTrends from '../assets/Projects/evotrends.png'
 import EvoVault from '../assets/Projects/evovault.png'
 import Metaverse from '../assets/Projects/metaverse.png'
+import McD from "../assets/Projects/McD.png";
 import Bugatti from '../assets/Projects/bugatti.png'
 import Promptopia from '../assets/Projects/promptopia.png'
 import Slider from '../assets/Projects/slider.png'
@@ -31,6 +32,7 @@ export {
     Button,
     GithubStats ,
     Cyperfiction,
+    McD,
     Lazarev,
     iPhone,
     Brainwave,

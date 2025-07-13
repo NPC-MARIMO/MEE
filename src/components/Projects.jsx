@@ -12,6 +12,7 @@ import {
   EvoVault,
   iPhone,
   Lazarev,
+  McD,
   Metaverse,
   Promptopia,
   Slider,
@@ -136,6 +137,14 @@ const projects = [
     imageUrl: Cyperfiction,
     date: "August 2024",
     link: "https://cyperfiction-by-mosshead.vercel.app/",
+  },
+  {
+    title: "Mc Donald Clone",
+    idx: 13,
+    description: "Creative loading animation and hero section using HTML, CSS, JS ",
+    imageUrl: McD,
+    date: "August 2024",
+    link: "https://mc-d-chi.vercel.app/",
   },
 ];
 
