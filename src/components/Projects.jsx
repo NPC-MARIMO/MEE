@@ -216,7 +216,7 @@ const projects = [
   }, [showAllProjects, isLaptop]);
 
   return (
-    <div className={styles.container} id="Projects" ref={containerRef}>
+    <div className={styles.container} id="Project" ref={containerRef}>
       <h1 className={styles.title} ref={titleRef}>
         Projects
       </h1>

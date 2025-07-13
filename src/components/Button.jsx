@@ -2,7 +2,7 @@ import styles from "../css/Button.module.css";
 import gsap from "gsap";
 import { useRef } from "react";
 
-function Button({ title, style, handleSendMail, buttonref}) {
+function Button({ title, style, onClick, buttonref}) {
   const circleRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -30,7 +30,7 @@ function Button({ title, style, handleSendMail, buttonref}) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button onClick={handleSendMail} className={styles.buttonText}>{title}</button>
+      <button onClick={onClick} className={styles.buttonText}>{title}</button>
       <div ref={circleRef} className={styles.buttoncircle}></div>
     </div>
   );
