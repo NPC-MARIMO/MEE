@@ -71,8 +71,8 @@ const ContributionGraph = () => {
               key={dayIndex}
               title={`${day.date}: ${day.contributionCount} contributions`}
               style={{
-                width: "17px",
-                height: "17px",
+                width: window.innerWidth < 1000 ? "8px" : window.innerWidth < 1500 ? "12px" : "17px",
+                height: window.innerWidth < 1000 ? "8px" : window.innerWidth < 1500 ? "12px" : "17px",
                 backgroundColor: day.contributionCount > 0 ? day.color : "#161b22",
                 borderRadius: "3px",
                 transition: "transform 0.2s",

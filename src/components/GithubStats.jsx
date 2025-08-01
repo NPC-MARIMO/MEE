@@ -24,7 +24,7 @@ const GithubStats = () => {
   return (
     <div>
       {/* Other Stats */}
-      {width > 1470 ? (
+      {width > 800? (
         <div
           style={{
             padding: "20px",

@@ -67,7 +67,7 @@
 
 @media screen and (max-width: 1470px) {
     .githubcontri{
-        height: 0;
+        /* height: 0; */
     }
     
 }
