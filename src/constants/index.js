@@ -7,6 +7,8 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import GithubStats from "../components/GithubStats";
+import Logo from '../assets/Logo/Mosscript.png'
+import Logo2 from "../assets/Logo/Logo2.png";
 
 import Lazarev from '../assets/Projects/lazarev.png'
 import iPhone from '../assets/Projects/iphone.png'
@@ -253,5 +255,7 @@ export {
     Promptopia,
     Slider,
     SolarSystem,
-    skills
+    skills,
+    Logo,
+    Logo2
 }

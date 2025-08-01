@@ -1,4 +1,4 @@
-import { Button } from "../constants";
+import { Button, Logo, Logo2 } from "../constants";
 import styles from "../css/Navbar.module.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -50,14 +50,16 @@ function Navbar() {
     <nav className={styles.container}>
       <div className={styles.leftsmall}>
         <img
-          src="https://raw.githubusercontent.com/NPC-MARIMO/mypf/refs/heads/main/src/assets/logo.png"
+          style={{ width: 55, height: 55, inset:"0", borderRadius: "50%" }}
+          src={Logo2}
           alt=""
         />
       </div>
       <div className={styles.left}>
         <div ref={logoref} className={styles.logo}>
           <img
-            src="https://raw.githubusercontent.com/NPC-MARIMO/mypf/refs/heads/main/src/assets/logo.png"
+            style={{ width: 75, height: 75, borderRadius: "50%" }}
+            src={Logo2}
             alt=""
           />
         </div>
