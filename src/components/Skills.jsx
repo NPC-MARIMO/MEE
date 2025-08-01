@@ -95,7 +95,7 @@ function Skills() {
       : skills.filter((skill) => skill.category === activeCategory);
 
   // Determine how many skills to show initially based on mobile or desktop
-  const initialSkillCount = isMobile ? 6 : 10;
+  const initialSkillCount = isMobile ? 3 : 5;
   const displayedSkills = showAll
     ? filteredSkills
     : filteredSkills.slice(
@@ -116,10 +116,6 @@ function Skills() {
     }, 100);
   };
 
-  const handleCategoryChange = (categoryId) => {
-    setActiveCategory(categoryId);
-    setShowAll(false);
-  };
 
   return (
     <div className={styles.skillContainer} id="Skills" ref={containerRef}>
