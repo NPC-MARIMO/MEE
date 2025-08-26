@@ -34,7 +34,7 @@ function Footer() {
         </a>
       </div>
       <p className={styles.description}>
-        © {currentYear} — Built with chaos & code
+        © {currentYear} — Forged with chaos & code
       </p>
     </div>
   );

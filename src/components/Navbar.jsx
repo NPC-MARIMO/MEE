@@ -50,7 +50,7 @@ function Navbar() {
     <nav className={styles.container}>
       <div className={styles.leftsmall}>
         <img
-          style={{ width: 55, height: 55, inset:"0", borderRadius: "50%" }}
+          style={{ width: 55, height: 55, inset: "0", borderRadius: "50%" }}
           src={Logo2}
           alt=""
         />
@@ -76,7 +76,7 @@ function Navbar() {
       <div className={styles.right}>
         <Button
           buttonref={buttonref}
-          title="Let's Talk"
+          title="Commune"
           params="Contact"
           handleSendMail={(e) => handleClick(e, "Contact")}
         />

@@ -76,13 +76,15 @@ function About() {
               <div className={styles.emoji}>🌑</div>
             </div>
             <p className={styles.description}>
-              It all began in February 2024. No mentors. No compass. Just raw
-              curiosity and caffeine. I built wonders. I broke them. And through
-              the wreckage, I rose — fast, focused, and unafraid.
+              In the month of February, in the year of our Lord 2024, mine
+              odyssey began. Mentor had I none, nor compass to guide my hand —
+              naught but raw curiosity and the bitter draught of caffeine.
+              Wonders I did fashion, and wonders I did shatter. Yet from the
+              wreckage I arose — swift, steadfast, and void of fear.
             </p>
             {/* <div className={styles.hoverReveal}> */}
-              
-              <div className={styles.hoverGlow}></div>
+
+            <div className={styles.hoverGlow}></div>
             {/* </div> */}
           </div>
         </div>
@@ -98,14 +100,15 @@ function About() {
               <div className={styles.emoji}>⚡</div>
             </div>
             <p className={styles.description}>
-              I am driven not by deadlines but by the hunger to evolve. Every
-              challenge is an invitation to level up. And every time I learn, I
-              pass that flame forward. Because knowledge hoarded is power
-              wasted.
+              I am stirred not by the lash of deadlines, but by the hunger of
+              mine own becoming. Each trial is a summons to ascend, each
+              challenge a call to rise. And each time I garner wisdom, I bear
+              the flame unto others — for knowledge hoarded is but power
+              squandered.
             </p>
             {/* <div className={styles.hoverReveal}> */}
-              
-              <div className={styles.hoverGlow}></div>
+
+            <div className={styles.hoverGlow}></div>
             {/* </div> */}
           </div>
         </div>
@@ -116,20 +119,22 @@ function About() {
               <span className={styles.sectionNumber}>03</span>
               <div className={styles.titleWrapper}>
                 <h2 className={styles.sectionTitle}>
-                  The Human Beneath the Dev
+                  The Mortal Beneath the Coder
                 </h2>
                 <div className={styles.titleUnderline}></div>
               </div>
               <div className={styles.emoji}>🌕</div>
             </div>
             <p className={styles.description}>
-              When the terminal sleeps, I don't. I'm lost in chess endgames,
-              sketching ideas that refuse to be silent, or falling into anime
-              sagas that remind me how to feel like a hero.
+              When the terminal slumbereth, I do not. Mine hours are spent
+              amidst the wars of chess endgames, sketching visions that brook no
+              silence, or wandering deep in anime sagas that bid me remember
+              what it is to feel as a hero.
+              
             </p>
             {/* <div className={styles.hoverReveal}> */}
-              
-              <div className={styles.hoverGlow}></div>
+
+            <div className={styles.hoverGlow}></div>
             {/* </div> */}
           </div>
         </div>

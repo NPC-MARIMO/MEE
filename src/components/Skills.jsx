@@ -124,7 +124,6 @@ function Skills() {
       </h1>
 
       {/* Add category filter buttons if you have categories */}
-   
 
       <div className={styles.skillsGrid}>
         {displayedSkills.map((skill, index) => (
@@ -140,7 +139,7 @@ function Skills() {
       {hasMoreSkills && (
         <div className={styles.viewAllButtonContainer}>
           <Button
-            title={showAll ? "Hide" : `View All `}
+            title={showAll ? "Curtail" : ` Unveil`}
             onClick={handleToggleShow}
             style={{ marginTop: "30px", width: 100 }}
           />

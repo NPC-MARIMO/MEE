@@ -222,15 +222,15 @@ const projects = [
       </h1>
 
       <h2 className={styles.subtitle} ref={subtitleRef}>
-        🌒 What Follows Isn't Just Projects —
+        🌒 “What followeth be not mere projects —”
       </h2>
 
       <p className={styles.description} ref={descriptionRef}>
-        It's Proof. Each creation below is forged from late nights, broken
-        logic, and stubborn brilliance. ✨ They are not demos. They are
-        declarations. From solving real-world chaos to wielding a tech stack
-        like a spellbook, these builds show what I can do — and hint at what
-        I've yet to unleash.
+        ’Tis Proof. Each creation beneath is forged of late-night vigils, of
+        broken logick, and of stubborn brilliance. ✨ These be not mere demos,
+        but solemn declarations. From taming the chaos of the world to wielding
+        the tech-stack as though a spellbook, these works proclaim what I may do
+        — and whisper of that which I have yet to unleash.
       </p>
 
       <div className={styles.projectsGrid}>
@@ -253,7 +253,7 @@ const projects = [
                   className={styles.projectImage}
                 />
                 <div className={styles.projectOverlay}>
-                  <span className={styles.viewProject}>View Project</span>
+                  <span className={styles.viewProject}>Behold</span>
                 </div>
               </a>
             </div>
@@ -272,7 +272,7 @@ const projects = [
         ref={buttonRef}
         onClick={() => setShowAllProjects(!showAllProjects)}
       >
-        <Button title={showAllProjects ? "View Less" : "View More"} />
+        <Button title={showAllProjects ? "Curtail" : "Unveil"} />
       </div>
     </div>
   );

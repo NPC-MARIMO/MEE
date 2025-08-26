@@ -117,13 +117,13 @@ function Contact() {
       </h1>
 
       <h2 className={styles.subtitle} ref={subtitleRef}>
-        🌑 Have an idea? A dream? A bug that won't die? Bring it.
+        🌑 Hast thou an idea? A dream? A bug that dieth not? Bring it hither.
       </h2>
 
       <p className={styles.description} ref={descriptionRef}>
-        Whether you're here to ship something wild, debug the chaos, or just
-        conjure code with kindred spirits — ⚡ I'm listening. Fully. Fiercely.
-        Let's turn thoughts into thunder.
+        Whether thou art hither to launch aught wild, to smite the chaos of
+        errors, or to conjure code with kindred spirits — ⚡ I hearken. Fully.
+        Fiercely. Come, let us turn thoughts into thunder.
       </p>
 
       <div className={styles.formContainer} ref={formRef}>
@@ -160,7 +160,7 @@ function Contact() {
         <div className={styles.actionContainer}>
           <div className={styles.buttonWrapper}>
             <Button
-              title={isSending ? "Sending..." : "Say Hii!"}
+              title={isSending ? "Sending..." : "Yo!"}
               onClick={handleSendMail}
               disabled={isSending}
               style={{ width: "100px" }}

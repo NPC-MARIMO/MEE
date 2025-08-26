@@ -214,20 +214,14 @@ function Hero() {
 
           <p ref={taglineRef} className={styles.description}>
             {" "}
-            - Building Chaos into Code
+            - Forging Chaos into Code
           </p>
 
           <p className={styles.description}>
-            {`🌕 I am a self-taught conjurer of the MERN stack —
-a full-stack forger sculpting ideas into impact.
-
-🔥 I craft projects not just with code, but with conviction.
-⚡ Each line a strike of intent. Each deploy, a declaration.
-
-And yes…
-I’m ${myAge}.
-Young in years.
-Ancient in vision.`
+            {`🌕 “I am a self-taught conjurer of the MERN stack — a full-stack forger, shaping wild conceits into wrought impact.
+🔥 I fashion my works not with code alone, but with steadfast conviction.
+⚡ Each line a stroke of intent, each deployment a proud declaration.
+And lo… though I count but ${myAge} winters, my vision be aged as the ancients.”`
               .split(" ")
               .map((word, index) => (
                 <span
