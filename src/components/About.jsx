@@ -20,6 +20,10 @@ function About() {
   const sectionRefs = useRef([]);
 
   useGSAP(() => {
+    if (window.innerWidth < 1000) {
+      // Do not run any animation if screen width is less than 1000px
+      return;
+    }
     // Title animation
     gsap.from(titleRef.current, {
       scrollTrigger: {

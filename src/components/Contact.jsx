@@ -72,6 +72,11 @@ function Contact() {
 
   // GSAP animations
   useGSAP(() => {
+    if (window.innerWidth < 1000) {
+      // Do not run any animation if screen width is less than 1000px
+      return;
+    }
+
     gsap.from(titleRef.current, {
       scrollTrigger: {
         trigger: titleRef.current,

@@ -160,6 +160,10 @@ const projects = [
   }, []);
 
   useGSAP(() => {
+    if (window.innerWidth < 1000) {
+      // Do not run any animation if screen width is less than 1000px
+      return;
+    }
     if (isLaptop) {
       gsap.from(titleRef.current, {
         scrollTrigger: {

@@ -29,6 +29,11 @@ function Skills() {
   }, []);
 
   useGSAP(() => {
+    if (window.innerWidth < 1000) {
+      // Do not run any animation if screen width is less than 1000px
+      return;
+    }
+
     categoryRefs.current = [];
     skillRefs.current = [];
 
@@ -115,7 +120,6 @@ function Skills() {
       });
     }, 100);
   };
-
 
   return (
     <div className={styles.skillContainer} id="Skills" ref={containerRef}>

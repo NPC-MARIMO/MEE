@@ -84,6 +84,10 @@ function Hero() {
   }, []);
 
   useGSAP(() => {
+    if (window.innerWidth < 1000) {
+      // Do not run any animation if screen width is less than 1000px
+      return;
+    }
     if (isLaptop) {
       const tl = gsap.timeline();
       tl.from(h3ref.current, { ease: "power4.out", opacity: 0, y: 100 }, "a")
