@@ -155,15 +155,9 @@ export default function SkillCard({ skill, index }) {
             <h3 className={styles.name}>{skill.name}</h3>
             <p className={styles.description}>{skill.description}</p>
           </div>
-          <div className={styles.level}>{skill.level}%</div>
         </div>
 
-        <div className={styles.progressContainer}>
-          <div className={styles.progressTrack}>
-            <div ref={progressRef} className={styles.progressBar}></div>
-            <div className={styles.progressGlow}></div>
-          </div>
-        </div>
+     
 
         <div className={styles.stats}>
           <div className={styles.stat}>
