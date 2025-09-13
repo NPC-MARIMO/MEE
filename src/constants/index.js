@@ -23,6 +23,7 @@ import Promptopia from '../assets/Projects/promptopia.png'
 import Slider from '../assets/Projects/slider.png'
 import SolarSystem from '../assets/Projects/solarsystem.png'
 import Cyperfiction from '../assets/Projects/cyperfiction.png'
+import Win2Win from '../assets/Projects/Win2Win.png'
 
 import Canva from '../assets/Skills/Canva.jpeg'
 import ContextAPI from '../assets/Skills/ContextAPI.png'
@@ -250,6 +251,7 @@ export {
     Carrental,
     EvoTrends,
     Metaverse,
+    Win2Win,
     EvoVault,
     Bugatti,
     Promptopia,
