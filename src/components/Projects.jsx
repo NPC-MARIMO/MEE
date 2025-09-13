@@ -17,6 +17,7 @@ import {
   Promptopia,
   Slider,
   SolarSystem,
+  Win2Win,
 } from "../constants";
 import { useGSAP } from "@gsap/react";
 
@@ -145,6 +146,14 @@ const projects = [
     imageUrl: McD,
     date: "August 2024",
     link: "https://mc-d-chi.vercel.app/",
+  },
+  {
+    title: "Win2Win",
+    idx: 14,
+    description: "A Color Prediction Betting Game With MERN and Websockets.",
+    imageUrl: Win2Win,
+    date: "August 2025",
+    link: "https://f-color-prediction.vercel.app/",
   },
 ];
 
