@@ -40,9 +40,9 @@
     display: flex;
 }
 .circle{
-    height: 325px;
+    height: 275px;
     right: 0%;
-    width: 325px;
+    width: 275px;
     border-radius: 50%;
     background: #161b22;
     overflow: hidden;
