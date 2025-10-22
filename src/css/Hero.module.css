@@ -45,6 +45,7 @@
     width: 325px;
     border-radius: 50%;
     background: #161b22;
+    border: 2px solid #30363d;
     position: absolute;
     overflow: hidden;
 }
