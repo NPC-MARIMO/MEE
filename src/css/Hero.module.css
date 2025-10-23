@@ -98,6 +98,9 @@
        align-items: center;
        justify-content: center;
     }
+    .githubcontri{
+        height: 0;
+    }
     .description{
             width: auto;
     }

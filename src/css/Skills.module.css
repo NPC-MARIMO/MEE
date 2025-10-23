@@ -291,10 +291,10 @@
     margin-top: 20px;
 }
 
-/* Mobile-specific improvements */
+
 @media (max-width: 768px) {
   .skillContainer {
-    margin-top: 100px;
+    margin-top: 0px;
     padding: 0 20px;
   }
 
