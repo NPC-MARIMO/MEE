@@ -25,8 +25,7 @@ function Footer() {
         </a>
         <a
           target="_blank"
-          href="https://www.linkedin.com/in/mosscript/
-"
+          href="https://www.linkedin.com/in/mosscript"
         >
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCRY-_1KUebBLAmg_KU3HznHFhBdKbZOQ9qg&s"
