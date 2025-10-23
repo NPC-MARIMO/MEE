@@ -37,3 +37,9 @@
     }
     
 }
+@media screen and (max-width: 820px) {
+    .container{
+        padding: 50px 20px;
+    }
+    
+}
