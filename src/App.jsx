@@ -9,7 +9,9 @@ import {
 } from "./constants";
 import "./App.css";
 import Loading from "./components/Loading";
+import JSONLD from "./components/JSONLD"; // <-- import here
 import { useEffect, useState } from "react";
+
 function App() {
   const [showLoading, setShowLoading] = useState(true);
   const [startAnimation, setStartAnimation] = useState(false);
@@ -25,6 +27,9 @@ function App() {
 
   return (
     <>
+      {/* JSON-LD goes here at top level */}
+      <JSONLD />
+
       <main>
         <Navbar />
         <div className="container">
