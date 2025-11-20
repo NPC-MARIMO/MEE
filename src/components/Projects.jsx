@@ -54,14 +54,13 @@ const projects = [
     date: "June 2025",
     link: "https://evo-vault-theta.vercel.app/",
   },
-  {
-    title: "Lazarev",
+   {
+    title: "GeneTalk",
     idx: 3,
-    description:
-      "A pixel-perfect recreation of an award-winning website using HTML, CSS, and JavaScript.",
-    imageUrl: Lazarev,
-    date: "April 2024",
-    link: "https://mosshead-lazarev.vercel.app/",
+    description: "An AI based cross species communication platform where you can understand Animal feelings. ",
+    imageUrl: GeneTalk,
+    date: "November 2025",
+    link: "https://genetalk.netlify.app/",
   },
   {
     title: "iPhone",
@@ -148,13 +147,15 @@ const projects = [
     link: "https://mc-d-chi.vercel.app/",
   },
   {
-    title: "GeneTalk",
+    title: "Lazarev",
     idx: 14,
-    description: "An AI based cross species communication platform where you can understand Animal feelings. ",
-    imageUrl: GeneTalk,
-    date: "November 2025",
-    link: "https://genetalk.netlify.app/",
-  },
+    description:
+      "A pixel-perfect recreation of an award-winning website using HTML, CSS, and JavaScript.",
+    imageUrl: Lazarev,
+    date: "April 2024",
+    link: "https://mosshead-lazarev.vercel.app/",
+  }
+  
 ];
 
   const displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
