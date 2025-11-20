@@ -7,6 +7,7 @@ import {
   Brainwave,
   Bugatti,
   Carrental,
+  GeneTalk,
   Cyperfiction,
   EvoTrends,
   EvoVault,
@@ -145,6 +146,14 @@ const projects = [
     imageUrl: McD,
     date: "August 2024",
     link: "https://mc-d-chi.vercel.app/",
+  },
+  {
+    title: "GeneTalk",
+    idx: 14,
+    description: "An AI based cross species communication platform where you can understand Animal feelings. ",
+    imageUrl: GeneTalk,
+    date: "November 2025",
+    link: "https://genetalk.netlify.app/",
   },
 ];
 
