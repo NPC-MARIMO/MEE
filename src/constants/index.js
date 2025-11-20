@@ -24,6 +24,7 @@ import Slider from '../assets/Projects/slider.png'
 import SolarSystem from '../assets/Projects/solarsystem.png'
 import Cyperfiction from '../assets/Projects/cyperfiction.png'
 import Win2Win from '../assets/Projects/Win2Win.png'
+import GeneTalk from '../assets/Projects/GeneTalk.png'
 
 import Canva from '../assets/Skills/Canva.jpeg'
 import ContextAPI from '../assets/Skills/ContextAPI.png'
