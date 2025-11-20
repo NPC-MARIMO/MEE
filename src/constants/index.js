@@ -258,6 +258,7 @@ export {
     Promptopia,
     Slider,
     SolarSystem,
+    GeneTalk,
     skills,
     Logo,
     Logo2
