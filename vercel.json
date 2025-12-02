@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://mosscript.xyz/$1",
+      "permanent": true
+    }
+  ]
+}
