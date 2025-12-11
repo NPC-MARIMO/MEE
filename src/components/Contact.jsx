@@ -122,13 +122,11 @@ function Contact() {
       </h1>
 
       <h2 className={styles.subtitle} ref={subtitleRef}>
-        🌑 Hast thou an idea? A dream? A bug that dieth not? Bring it hither.
+        🌑 Have an idea, a project, or a persistent bug that needs attention? Feel free to reach out.
       </h2>
 
       <p className={styles.description} ref={descriptionRef}>
-        Whether thou art hither to launch aught wild, to smite the chaos of
-        errors, or to conjure code with kindred spirits — ⚡ I hearken. Fully.
-        Fiercely. Come, let us turn thoughts into thunder.
+       Whether you’re looking to build something ambitious, solve complex technical issues, or collaborate on meaningful work, I’m ready to help. Let’s turn ideas into something real and measurable.
       </p>
 
       <div className={styles.formContainer} ref={formRef}>
