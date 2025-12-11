@@ -236,15 +236,11 @@ const projects = [
       </h1>
 
       <h2 className={styles.subtitle} ref={subtitleRef}>
-        🌒 “What followeth be not mere projects —”
+        🌒 “Not just projects, but proof of what I can build and how I build it.”
       </h2>
 
       <p className={styles.description} ref={descriptionRef}>
-        ’Tis Proof. Each creation beneath is forged of late-night vigils, of
-        broken logick, and of stubborn brilliance. ✨ These be not mere demos,
-        but solemn declarations. From taming the chaos of the world to wielding
-        the tech-stack as though a spellbook, these works proclaim what I may do
-        — and whisper of that which I have yet to unleash.
+       These projects represent the core of my work as a developer. Each one is built through consistent iteration, late-night problem solving, and a focus on clean architecture. They aren’t simple demos; they reflect how I approach real-world challenges, apply my technical skills, and push myself toward stronger, more scalable solutions.
       </p>
 
       <div className={styles.projectsGrid}>
