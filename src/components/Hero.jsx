@@ -222,7 +222,7 @@ function Hero() {
           </p>
 
           <p className={styles.description}>
-            {`🌕 “I’m a self-taught full-stack developer focused on the MERN stack. I build reliable, scalable applications with clear structure and deliberate design. My workflow is disciplined, and every feature or deployment fits into a cohesive product. I’m continuously refining my engineering practices to deliver efficient, meaningful solutions.”`
+            {`🌕 “I’m a self-taught full-stack developer working with the MERN stack and practical AI/ML. I build reliable, scalable applications with clear structure and deliberate design, and I use tools like NumPy, Pandas, TensorFlow, and scikit-learn to create data-driven solutions. My workflow is disciplined, and I’m always refining my engineering practices to deliver efficient, meaningful work.”`
               .split(" ")
               .map((word, index) => (
                 <span
