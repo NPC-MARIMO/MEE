@@ -80,11 +80,7 @@ function About() {
               <div className={styles.emoji}>🌑</div>
             </div>
             <p className={styles.description}>
-              In the month of February, in the year of our Lord 2024, mine
-              odyssey began. Mentor had I none, nor compass to guide my hand —
-              naught but raw curiosity and the bitter draught of caffeine.
-              Wonders I did fashion, and wonders I did shatter. Yet from the
-              wreckage I arose — swift, steadfast, and void of fear.
+             I started my development journey in February 2024 with no formal mentor or structured path. Curiosity and persistence pushed me forward as I experimented, broke things, and rebuilt them with a clearer understanding each time. Those early failures shaped my discipline and approach to engineering, and they continue to guide how I learn, solve problems, and build today.
             </p>
             {/* <div className={styles.hoverReveal}> */}
 
@@ -104,11 +100,7 @@ function About() {
               <div className={styles.emoji}>⚡</div>
             </div>
             <p className={styles.description}>
-              I am stirred not by the lash of deadlines, but by the hunger of
-              mine own becoming. Each trial is a summons to ascend, each
-              challenge a call to rise. And each time I garner wisdom, I bear
-              the flame unto others — for knowledge hoarded is but power
-              squandered.
+             My motivation comes from growth, not pressure. Every project and setback has pushed me to improve my skills and sharpen my problem-solving approach. As I learn, I make it a point to share insights with other developers because knowledge only becomes more valuable when it circulates.
             </p>
             {/* <div className={styles.hoverReveal}> */}
 
@@ -130,10 +122,7 @@ function About() {
               <div className={styles.emoji}>🌕</div>
             </div>
             <p className={styles.description}>
-              When the terminal slumbereth, I do not. Mine hours are spent
-              amidst the wars of chess endgames, sketching visions that brook no
-              silence, or wandering deep in anime sagas that bid me remember
-              what it is to feel as a hero.
+              Outside of development, I spend time studying chess strategy, sketching, and exploring anime stories that spark creativity. These pursuits help me stay grounded and give me fresh perspectives that I bring back into my work.
               
             </p>
             {/* <div className={styles.hoverReveal}> */}
