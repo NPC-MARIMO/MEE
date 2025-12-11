@@ -218,7 +218,7 @@ function Hero() {
 
           <p ref={taglineRef} className={styles.description}>
             {" "}
-            - Forging Chaos into Code
+            - Cold and Minimal
           </p>
 
           <p className={styles.description}>
