@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Senior Software Engineer",
+    "company": "Independent / Open Source",
+    "description": "Architecting and shipping full-stack applications, systems tools, and AI-integrated products. Leading open source projects across Rust, TypeScript, and Python ecosystems. Building developer tools that prioritize performance, correctness, and developer experience.",
+    "timeframe": "2024 - Present",
+    "technologies": ["TypeScript", "Rust", "Python", "React", "Next.js", "Node.js"]
+  },
+  {
+    "title": "Full Stack Engineer",
+    "company": "Contract & Consulting",
+    "description": "Delivered production-grade web applications and API systems for multiple clients. Specialized in high-throughput Node.js backends with React frontends. Implemented CI/CD pipelines, database optimization, and real-time features across diverse domains.",
+    "timeframe": "2022 - 2024",
+    "technologies": ["React", "Node.js", "MongoDB", "PostgreSQL", "Docker", "AWS"]
+  },
+  {
+    "title": "Software Developer",
+    "company": "Early Career",
+    "description": "Built foundational skills across the web stack. Contributed to open source projects, developed Android applications, and explored systems programming with Rust. Focused on understanding computing fundamentals from the hardware up.",
+    "timeframe": "2020 - 2022",
+    "technologies": ["JavaScript", "Python", "Kotlin", "Android", "Express", "Git"]
+  }
+]

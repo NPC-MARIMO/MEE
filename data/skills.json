@@ -1,0 +1,67 @@
+[
+  {
+    "category": "Frontend",
+    "skills": [
+      { "name": "React", "category": "Frontend", "proficiency": 95 },
+      { "name": "TypeScript", "category": "Frontend", "proficiency": 93 },
+      { "name": "Next.js", "category": "Frontend", "proficiency": 90 },
+      { "name": "Tailwind CSS", "category": "Frontend", "proficiency": 92 },
+      { "name": "WebGL / Three.js", "category": "Frontend", "proficiency": 72 },
+      { "name": "Framer Motion", "category": "Frontend", "proficiency": 85 }
+    ]
+  },
+  {
+    "category": "Backend",
+    "skills": [
+      { "name": "Node.js", "category": "Backend", "proficiency": 94 },
+      { "name": "Express", "category": "Backend", "proficiency": 92 },
+      { "name": "Python", "category": "Backend", "proficiency": 88 },
+      { "name": "FastAPI", "category": "Backend", "proficiency": 82 },
+      { "name": "GraphQL", "category": "Backend", "proficiency": 78 },
+      { "name": "REST API Design", "category": "Backend", "proficiency": 95 }
+    ]
+  },
+  {
+    "category": "Systems",
+    "skills": [
+      { "name": "Rust", "category": "Systems", "proficiency": 85 },
+      { "name": "C / C++", "category": "Systems", "proficiency": 75 },
+      { "name": "Tokio / Async Rust", "category": "Systems", "proficiency": 80 },
+      { "name": "Memory Management", "category": "Systems", "proficiency": 82 },
+      { "name": "Concurrency Patterns", "category": "Systems", "proficiency": 84 },
+      { "name": "Linux Systems", "category": "Systems", "proficiency": 78 }
+    ]
+  },
+  {
+    "category": "AI / ML",
+    "skills": [
+      { "name": "PyTorch", "category": "AI / ML", "proficiency": 80 },
+      { "name": "Transformers / LLMs", "category": "AI / ML", "proficiency": 78 },
+      { "name": "Fine-tuning", "category": "AI / ML", "proficiency": 75 },
+      { "name": "RAG Systems", "category": "AI / ML", "proficiency": 82 },
+      { "name": "Prompt Engineering", "category": "AI / ML", "proficiency": 88 },
+      { "name": "MLOps", "category": "AI / ML", "proficiency": 70 }
+    ]
+  },
+  {
+    "category": "Mobile",
+    "skills": [
+      { "name": "Kotlin", "category": "Mobile", "proficiency": 82 },
+      { "name": "Jetpack Compose", "category": "Mobile", "proficiency": 78 },
+      { "name": "Android SDK", "category": "Mobile", "proficiency": 80 },
+      { "name": "React Native", "category": "Mobile", "proficiency": 72 }
+    ]
+  },
+  {
+    "category": "DevOps",
+    "skills": [
+      { "name": "Docker", "category": "DevOps", "proficiency": 90 },
+      { "name": "CI/CD Pipelines", "category": "DevOps", "proficiency": 88 },
+      { "name": "AWS", "category": "DevOps", "proficiency": 78 },
+      { "name": "Vercel", "category": "DevOps", "proficiency": 92 },
+      { "name": "PostgreSQL", "category": "DevOps", "proficiency": 85 },
+      { "name": "MongoDB", "category": "DevOps", "proficiency": 90 },
+      { "name": "Redis", "category": "DevOps", "proficiency": 82 }
+    ]
+  }
+]

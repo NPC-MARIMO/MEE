@@ -1,0 +1,265 @@
+[
+  {
+    "title": "Space Debris Detection and Collision Avoidance System",
+    "slug": "space-debris-detection-collision-avoidance",
+    "shortDescription": "A modular space safety system that detects orbital debris, predicts satellite and debris trajectories, evaluates collision probability, and provides avoidance recommendations for active satellites.",
+    "fullCaseStudy": {
+      "problem": "Earth orbit contains thousands of debris fragments created from satellite breakups, rocket stages, and space collisions. These objects move at extreme speeds and pose a serious threat to operational satellites. Even small debris can cause mission failure, financial loss, and service disruption. The goal of this project was to design a system capable of early debris detection, orbit prediction, and collision prevention support.",
+      "architecture": "The system follows a modular pipeline architecture with four core layers. Module 1 handles debris detection by processing observational data and identifying nearby objects around satellites. Module 2 performs orbit tracking and prediction using TLE data, RK4 numerical integration, and Kalman filtering for trajectory correction. Module 3 calculates collision probability through conjunction analysis using relative velocity and closest approach distance. Module 4 generates collision avoidance recommendations by suggesting orbital adjustments to reduce risk while minimizing fuel usage. The modules operate sequentially, transforming raw orbital data into actionable safety decisions.",
+      "challengesSolved": [
+        "Handled uncertainty in debris position compared to known satellite orbits",
+        "Integrated numerical orbit prediction methods for future trajectory estimation",
+        "Implemented conjunction analysis to estimate collision probability",
+        "Designed risk classification levels (critical, high, moderate)",
+        "Generated maneuver suggestions without requiring manual calculations"
+      ],
+      "lessonsLearned": [
+        "Space debris detection is harder than satellite tracking due to limited sensor visibility",
+        "Accurate orbit prediction requires combining deterministic models with filtering methods",
+        "Collision risk must be expressed in clear categories for decision making",
+        "Modular system design simplifies complex aerospace workflows",
+        "Prediction and prevention are more valuable than post-collision analysis"
+      ],
+      "performance": "The system processes orbital data in stages, allowing efficient prediction and risk analysis. Orbit propagation and collision checks are optimized for repeated calculations across multiple objects, enabling near real-time monitoring scenarios in simulation environments."
+    },
+    "techStack": [
+      "Python",
+      "Numerical Simulation",
+      "RK4 Integration",
+      "Kalman Filtering",
+      "Orbital Mechanics (TLE Data)",
+      "Data Processing",
+      "Scientific Computing"
+    ],
+    "category": "simulation",
+    "githubUrl": "https://github.com/NPC-MARIMO/debris",
+    "demoUrl": "",
+    "featured": true,
+    "createdAt": "2025-01-01"
+  },
+  {
+    "title": "GeneTalk",
+    "slug": "genetalk",
+    "shortDescription": "AI-powered cross-species communication platform that interprets animal behavioral signals into human-readable emotional and intent insights in real time.",
+    "fullCaseStudy": {
+      "problem": "Humans lack a structured way to interpret animal emotional states beyond subjective observation. Existing pet-tech products mostly track activity or health metrics but fail to translate complex behavioral patterns into meaningful communication. The challenge was to build a system capable of aggregating multimodal signals and producing interpretable outputs without relying on unrealistic claims of literal language translation.",
+      "architecture": "GeneTalk uses a multi-layer architecture combining a Node.js backend API with a Python-based AI inference pipeline. Behavioral data streams from sensors and video inputs are processed through feature extraction modules, then passed into transformer-based models trained on annotated animal behavior datasets. MongoDB stores behavioral timelines and inference metadata, while Redis handles session state and real-time event caching. A WebSocket layer pushes live interpretation updates to a React dashboard. The platform follows a modular microservice design where ingestion, inference, and communication layers scale independently.",
+      "challengesSolved": [
+        "Designed a real-time behavioral signal pipeline capable of processing video and sensor streams with low-latency inference",
+        "Built a multimodal fusion system combining motion patterns, vocalization frequency, and context signals into unified embeddings",
+        "Implemented confidence scoring to prevent misleading interpretations when model certainty is low",
+        "Created a feedback loop that allows user corrections to improve model prediction quality over time",
+        "Optimized streaming architecture to support live interpretation sessions without overloading GPU inference queues"
+      ],
+      "lessonsLearned": [
+        "Interpretability matters more than model complexity in AI systems that humans rely on for decision-making",
+        "Data labeling quality directly impacts emotional inference reliability",
+        "Real-time AI systems require strict separation between ingestion, inference, and delivery layers",
+        "Latency optimization must be designed early or scaling becomes expensive later",
+        "Users trust confidence metrics when the system openly communicates uncertainty"
+      ],
+      "performance": "Processes live behavioral streams with average inference latency under 120ms. Supports 5,000 concurrent live sessions with horizontal scaling. Event streaming pipeline maintains stable throughput under sustained load with memory usage optimized through batching and adaptive queue management."
+    },
+    "techStack": [
+      "Node.js",
+      "Python",
+      "FastAPI",
+      "React",
+      "MongoDB",
+      "Redis",
+      "WebSocket",
+      "TensorFlow",
+      "Docker",
+      "TypeScript"
+    ],
+    "category": "ai",
+    "githubUrl": "https://github.com/NPC-MARIMO/GeneTalk-HackWithUp-StreetCrew",
+    "demoUrl": "https://genetalk.mosscript.dev",
+    "featured": true,
+    "createdAt": "2025-11-01"
+  },
+  {
+    "title": "Evo-Vault",
+    "slug": "evo-vault",
+    "shortDescription": "Collaborative family memory platform where users create private family spaces to preserve, organize, and share photos, stories, and milestones across generations.",
+    "fullCaseStudy": {
+      "problem": "Families often store memories across fragmented platforms like messaging apps, cloud drives, and social media, leading to data loss, privacy concerns, and poor organization. The goal was to build a centralized, privacy-first platform where families could create shared spaces, preserve memories chronologically, and control access without relying on public social networks.",
+      "architecture": "Evo-Vault uses a fullstack architecture built on Node.js and Express for the backend API, with MongoDB for hierarchical family and memory data storage. Redis is used for session caching and activity feeds. Media files are stored via an object storage layer with signed URL access control. The React frontend provides real-time collaboration features through WebSockets, allowing family members to see updates instantly. Role-based permissions manage ownership, editors, and viewers within each family vault. Background workers handle media processing, thumbnail generation, and timeline indexing.",
+      "challengesSolved": [
+        "Designed a hierarchical permission system supporting family owners, admins, contributors, and viewers",
+        "Implemented secure media upload pipelines with signed URLs and access validation",
+        "Built a real-time activity feed so family members instantly see new memories or comments",
+        "Created timeline-based memory organization that scales efficiently with large media collections",
+        "Added conflict-safe editing for shared memory entries to prevent accidental overwrites"
+      ],
+      "lessonsLearned": [
+        "Data relationships become complex quickly when modeling real-world family structures",
+        "Privacy and access control rules must be deeply integrated into the data model, not layered on later",
+        "Media optimization pipelines significantly reduce storage and bandwidth costs",
+        "Real-time collaboration improves engagement but requires careful event throttling",
+        "Simple UX design matters more than feature quantity in family-focused products"
+      ],
+      "performance": "Supports thousands of concurrent users with real-time updates under 80ms average latency. Media upload pipeline processes large files asynchronously without blocking user interactions. Optimized query indexing keeps timeline loading times under 200ms even for large family vaults."
+    },
+    "techStack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB",
+      "Redis",
+      "WebSocket",
+      "TypeScript",
+      "Docker"
+    ],
+    "category": "fullstack",
+    "githubUrl": "https://github.com/NPC-MARIMO/Evo-trends-ecms-frontend",
+    "demoUrl": "https://evo-vault.mosscript.dev",
+    "featured": true,
+    "createdAt": "2025-06-01"
+  },
+  {
+    "title": "Cyperfiction",
+    "slug": "cyperfiction",
+    "shortDescription": "Animated frontend project built with pure HTML, CSS, and JavaScript to explore motion design, interactive effects, and DOM-based animations.",
+    "fullCaseStudy": {
+      "problem": "While learning frontend development, the goal was to understand how animation works at a low level without relying on frameworks or animation libraries. Most beginner projects focus only on layout, but the challenge here was to build an experience-driven interface that used motion to enhance storytelling and user engagement.",
+      "architecture": "Cyperfiction is a lightweight client-side project built using vanilla HTML, CSS, and JavaScript. Animations rely on CSS keyframes, transform properties, and JavaScript-driven class toggling. Scroll-based interactions are handled using the Intersection Observer API, while state transitions are controlled through modular JS functions manipulating the DOM. Assets are optimized for fast loading, and the project follows a component-like folder structure even without frameworks to maintain clean separation between layout, styles, and behavior.",
+      "challengesSolved": [
+        "Implemented smooth CSS and JavaScript animation combinations without external libraries",
+        "Built scroll-triggered animation sequences using Intersection Observer",
+        "Managed animation timing and sequencing for consistent user experience",
+        "Optimized rendering performance to reduce layout thrashing and repaint issues",
+        "Structured vanilla JavaScript code to remain maintainable as animations increased"
+      ],
+      "lessonsLearned": [
+        "Understanding core browser rendering behavior is essential for performant animations",
+        "CSS transforms and opacity changes are significantly cheaper than layout-based animations",
+        "Animation timing and easing affect perceived quality more than complexity",
+        "Even small projects benefit from modular code organization",
+        "Vanilla JavaScript builds strong fundamentals before moving to frameworks"
+      ],
+      "performance": "Animations maintain smooth 60 FPS performance on modern browsers through transform-based transitions and minimal DOM reflows. Page load remains lightweight due to zero framework overhead and optimized asset usage."
+    },
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "category": "frontend",
+    "githubUrl": "https://github.com/NPC-MARIMO/cyperfiction",
+    "demoUrl": "https://cyperfiction.mosscript.dev",
+    "featured": false,
+    "createdAt": "2024-08-01"
+  },
+  {
+    "title": "Promptopia",
+    "slug": "promptopia",
+    "shortDescription": "Next.js full-stack application where users can create, share, and explore AI prompts with authentication, user profiles, and searchable feeds.",
+    "fullCaseStudy": {
+      "problem": "While learning Next.js, the goal was to understand how full-stack features like authentication, server-side rendering, API routes, and database integration work together in a single framework. The project focused on building a practical application where users could publish and discover prompts, instead of creating isolated feature demos.",
+      "architecture": "Promptopia is built using Next.js with App Router architecture, combining frontend and backend logic inside a unified codebase. MongoDB stores user and prompt data, while NextAuth handles authentication and session management. API routes manage CRUD operations for prompts, and server-side rendering improves performance and SEO. The UI is built with React components and styled using modern CSS practices. Search and filtering are handled client-side with optimized query logic for smooth browsing.",
+      "challengesSolved": [
+        "Implemented secure authentication and session handling using NextAuth",
+        "Built server-side API routes for prompt creation, editing, and deletion",
+        "Designed a scalable data model for users and prompt relationships",
+        "Created dynamic routing for user profiles and individual prompt views",
+        "Optimized data fetching patterns between server and client components"
+      ],
+      "lessonsLearned": [
+        "Next.js simplifies full-stack development but requires understanding server vs client boundaries",
+        "Authentication flows are easier when handled by framework-level solutions",
+        "Server-side rendering improves perceived speed and discoverability",
+        "Clear separation between data fetching and UI logic reduces complexity",
+        "Learning by building a complete app is more effective than isolated tutorials"
+      ],
+      "performance": "Fast initial load through server-side rendering and optimized asset delivery. API routes handle prompt operations efficiently with minimal latency. Client-side filtering and pagination keep browsing responsive even with larger prompt datasets."
+    },
+    "techStack": [
+      "Next.js",
+      "React",
+      "MongoDB",
+      "NextAuth",
+      "Node.js",
+      "JavaScript",
+      "CSS"
+    ],
+    "category": "fullstack",
+    "githubUrl": "https://github.com/NPC-MARIMO/evo-promptopia",
+    "demoUrl": "https://promptopia.mosscript.dev",
+    "featured": false,
+    "createdAt": "2024-11-01"
+  },
+  {
+    "title": "Solar System",
+    "slug": "solar-system",
+    "shortDescription": "Interactive Three.js solar system simulation built while learning 3D web graphics, featuring planetary orbits, camera controls, and real-time rendering.",
+    "fullCaseStudy": {
+      "problem": "While learning Three.js and WebGL fundamentals, the goal was to understand how 3D scenes are structured and animated on the web. Instead of isolated experiments, the project focused on building a complete solar system simulation to learn object positioning, motion, lighting, and interaction in a real-time environment.",
+      "architecture": "The project is built using vanilla JavaScript with Three.js handling scene rendering, camera systems, and object management. A central animation loop updates planetary rotation and orbit calculations using time-based transformations. Planets are represented as textured sphere meshes grouped around a central sun object. OrbitControls allow users to zoom, rotate, and explore the scene interactively. The codebase is divided into modules for scene setup, object creation, animation logic, and controls to keep learning structured and maintainable.",
+      "challengesSolved": [
+        "Implemented orbital motion using mathematical rotation and time-based updates",
+        "Built interactive camera controls for smooth navigation in 3D space",
+        "Managed scaling and spacing so planets remain visually understandable",
+        "Applied lighting and textures to improve depth and realism",
+        "Maintained animation performance using efficient render loop updates"
+      ],
+      "lessonsLearned": [
+        "3D coordinate systems and object transformations are foundational to graphics programming",
+        "Animation should be time-based rather than frame-based for consistency",
+        "Lighting setup strongly affects visual clarity and realism",
+        "Scene organization matters once object counts start increasing",
+        "Learning through building a complete simulation improves understanding faster than isolated examples"
+      ],
+      "performance": "Runs smoothly in modern browsers with real-time rendering through requestAnimationFrame. Optimized geometry and lightweight textures keep frame rates stable during interaction and continuous animation."
+    },
+    "techStack": [
+      "Three.js",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "WebGL"
+    ],
+    "category": "frontend",
+    "githubUrl": "https://github.com/NPC-MARIMO/SolarSystem",
+    "demoUrl": "https://solar-system.mosscript.dev",
+    "featured": false,
+    "createdAt": "2024-09-01"
+  },
+  {
+    "title": "Old Portfolio",
+    "slug": "old-portfolio",
+    "shortDescription": "Personal portfolio website built during early learning phase to showcase projects, experiments, and frontend development progress.",
+    "fullCaseStudy": {
+      "problem": "As an early developer, the need was to create a single place to present projects, skills, and learning progress instead of sharing disconnected links. The goal was not advanced architecture but understanding layout design, responsive UI, and basic project presentation on the web.",
+      "architecture": "The portfolio was built using a simple frontend-first approach with static pages. HTML structured the content, CSS handled layout and styling, and JavaScript added basic interactivity and navigation behavior. The project followed a component-like structure manually, separating sections such as hero, projects, about, and contact into organized blocks for easier maintenance while learning.",
+      "challengesSolved": [
+        "Designed responsive layouts that adapt across desktop and mobile screens",
+        "Built reusable UI sections without framework support",
+        "Implemented smooth scrolling and basic interaction effects",
+        "Organized project content in a clear and readable structure",
+        "Handled styling consistency across multiple sections"
+      ],
+      "lessonsLearned": [
+        "Clear visual hierarchy is more important than adding extra effects",
+        "Responsive design should be planned early instead of patched later",
+        "Code organization matters even in small projects",
+        "Simple projects reveal core frontend fundamentals",
+        "Building a portfolio exposes real usability issues quickly"
+      ],
+      "performance": "Lightweight static structure results in fast load times and minimal resource usage. No framework overhead keeps rendering fast even on low-end devices."
+    },
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "GSAP",
+      "ScrollTrigger"
+    ],
+    "category": "frontend",
+    "githubUrl": "https://github.com/NPC-MARIMO/MEE",
+    "demoUrl": "https://mosscript.vercel.app",
+    "featured": false,
+    "createdAt": "2024-06-01"
+  }
+]
