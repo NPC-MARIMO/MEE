@@ -16,11 +16,7 @@ export const metadata: Metadata = {
   description:
     "Building complex systems across the full stack. MERN, Rust, AI, Android, Desktop engineering.",
   icons: {
-    icon: [
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
+    icon: 'Mosscript.png',
     apple: "/apple-icon.png",
   },
 }
