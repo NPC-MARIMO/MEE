@@ -13,11 +13,13 @@ import {
 import { NAV_LINKS } from "@/lib/constants"
 
 const projectLinks = [
-  { label: "NexusAPI", href: "/projects/nexus-api" },
-  { label: "Ferrite", href: "/projects/ferrite" },
-  { label: "SynthMind", href: "/projects/synthmind" },
-  { label: "Vaultix", href: "/projects/vaultix" },
-  { label: "Prism Desktop", href: "/projects/prism-desktop" },
+  { label: "Space Debris Detection and Collision Avoidance System", href: "/projects/space-debris-detection-collision-" },
+  { label: "Genetalk", href: "/projects/genetalk" },
+  { label: "Evo Vault", href: "/projects/evo-vault" },
+  { label: "Cyperfiction", href: "/projects/cyperfiction" },
+  { label: "Promptopia", href: "/projects/promptopia" },
+  { label: "Solar System ", href: "/projects/solar-system" },
+  { label: "Old Portfolio ", href: "/projects/old-portfolio" },
 ]
 
 export function CommandPalette({

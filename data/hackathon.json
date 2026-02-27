@@ -1,0 +1,48 @@
+[
+    {
+        "name": "Re-Emagine Hackathon",
+        "organization": "Sheriyans Coding School",
+        "date": "2024",
+        "description": "Rebuilt Pepsi website with Cool Animations and Better UX. ",
+        "techStack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "GSAP",
+          "ScrollTrigger"
+    ],
+        "certificateImage": ""
+  },
+  {
+        "name": "HackWithUttarPradesh",
+        "organization": "Chandigard University Powered by Blackbox AI",
+        "date": "2025",
+        "description": "Built a Cross Species Communication App using LLMs",
+        "techStack": [
+          "Python",
+          "LLMs",
+          "TensorFlow",
+          "FastAPI",
+          "Next.js",
+          "OpenCV"
+    ],
+        "certificateImage": "https://media.licdn.com/dms/image/v2/D5622AQHI7gOUXGePlg/feedshare-shrink_800/B56Zpz0PcRI8Ag-/0/1762879669506?e=1773878400&v=beta&t=2OKhHwAdBNZGkhQuViGNEdEyXzKRk6ZTnx1quIcXNyo"
+  },
+  {
+        "name": "Hyperspace Innovation Hackathon",
+        "organization": "Technest",
+        "date": "2023",
+        "description": "Created a Space Debris Detection and Collision Prevention System using Computer Vision and AI.",
+        "techStack": [
+      "Python",
+      "TensorFlow",
+      "OpenCV",
+      "YOLO",
+      "Kamlan Filter",
+      "RK4",
+      "FastAPI",
+      "TLE"
+    ],
+        "certificateImage": "https://media.licdn.com/dms/image/v2/D4D22AQFing8TAJqgUg/feedshare-shrink_800/B4DZxLRMCIG8Ag-/0/1770789323466?e=1773878400&v=beta&t=LqQIM3McfeeqmDMvYsmKmMnC83LxuAx7npAYxO4M9BM"
+  }
+]

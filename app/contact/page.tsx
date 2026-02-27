@@ -48,7 +48,7 @@ export default function ContactPage() {
                     ? undefined
                     : "noopener noreferrer"
                 }
-                className="group flex flex-col items-start rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/40"
+                className="group flex overflow-hidden flex-col items-start rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/40"
               >
                 <div className="mb-4 text-muted-foreground transition-colors group-hover:text-primary">
                   {iconMap[link.icon]}
@@ -85,11 +85,11 @@ export default function ContactPage() {
               serious inquiries within 48 hours.
             </p>
             <a
-              href="mailto:hello@mosscript.dev"
+              href="mailto:mosscript.dev@gmail.com"
               className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
             >
               <Mail className="h-4 w-4" />
-              hello@mosscript.dev
+              mosscript.dev@gmail.com
             </a>
           </div>
         </ScrollReveal>
