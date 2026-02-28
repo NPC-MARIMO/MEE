@@ -13,7 +13,7 @@ import {
 import { NAV_LINKS } from "@/lib/constants"
 
 const projectLinks = [
-  { label: "Space Debris Detection and Collision Avoidance System", href: "/projects/space-debris-detection-collision-" },
+  { label: "Space Debris Detection and Collision Avoidance System", href: "/projects/space-debris-detection-collision-avoidance" },
   { label: "Genetalk", href: "/projects/genetalk" },
   { label: "Evo Vault", href: "/projects/evo-vault" },
   { label: "Cyperfiction", href: "/projects/cyperfiction" },
