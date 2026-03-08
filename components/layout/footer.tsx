@@ -1,11 +1,14 @@
 import Link from "next/link"
 import { SITE_CONFIG, SOCIAL_LINKS } from "@/lib/constants"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { ChessPawn, Github, Instagram, Linkedin, Mail, X } from "lucide-react"
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github className="h-4 w-4" />,
   linkedin: <Linkedin className="h-4 w-4" />,
   mail: <Mail className="h-4 w-4" />,
+  insta: <Instagram className="h-4 w-4" />,
+  x: <X className="h-4 w-4" />,
+  chess: <ChessPawn className="h-4 w-4" />
 }
 
 export function Footer() {

@@ -55,6 +55,9 @@ export default function AboutPage() {
         <ScrollReveal>
           <div className="mt-12 space-y-4 leading-relaxed text-muted-foreground">
             <p>
+              Hello! I'm Shivang Pandey, a senior software engineer with a passion for building robust, scalable systems. 
+            </p>
+            <p>
               I build software that handles real-world complexity. Not prototypes,
               not demos -- production systems that serve users, process data, and
               run reliably. My work spans from browser-rendered interfaces to

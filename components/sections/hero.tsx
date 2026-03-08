@@ -31,8 +31,8 @@ export function Hero() {
           className="max-w-3xl"
         >
           <motion.div variants={item}>
-            <span className="mb-6 inline-block font-mono text-sm text-primary">
-              Software Engineer
+            <span className="mb-6 inline-block font-mono text-lg text-primary">
+              Hello, I'm Shivang Pandey
             </span>
           </motion.div>
 

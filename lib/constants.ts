@@ -36,6 +36,22 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: "mailto:mosscript.dev@gmail.com",
     icon: "mail",
   },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/mosscript_",
+    icon: "insta",
+  },
+  
+  {
+    label: "X",
+    href: "https://x.com/mosscript",
+    icon: "x",
+  },
+  {
+    label: "Chess.com",
+    href: "https://chess.com/member/Shivang_7",
+    icon: "chess.com",
+  },
 ]
 
 export const TECH_DOMAINS = [
